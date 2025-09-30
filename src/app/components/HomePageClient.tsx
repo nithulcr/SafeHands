@@ -55,12 +55,13 @@ export default function HomePageClient() {
           <Header />
           <Hero />
           <Features />
+          <Services />
+
           <Marquee />
 
 
           <AboutUs />
           <ThreeStepProcess />
-          <Services />
 
 
           <ConsultationBanner />

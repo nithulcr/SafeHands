@@ -4,25 +4,38 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+function wrapWords(node: ChildNode): string {
+  if (node.nodeType === Node.TEXT_NODE) {
+    // Split text nodes by words and wrap each word in span with styles
+    return (node.textContent || "")
+      .split(/\s+/)
+      .map(word => {
+        if (!word) return "";
+        return `<span style="display:inline-block;opacity:0;transform:translateY(40px);margin-right:4px">${word}</span>`;
+      })
+      .join(" ");
+  } else if (node.nodeType === Node.ELEMENT_NODE) {
+    // Recursively process element children preserving tags
+    const el = node as HTMLElement;
+    const children = Array.from(el.childNodes).map(wrapWords).join(" ");
+    return `<${el.tagName.toLowerCase()}${Array.from(el.attributes).map(attr => ` ${attr.name}="${attr.value}"`).join("")}>${children}</${el.tagName.toLowerCase()}>`;
+  }
+  return "";
+}
+
 export function useStaggeredFadeUp<T extends HTMLElement>(ref: React.RefObject<T>) {
   useEffect(() => {
     if (!ref.current) return;
 
     const element = ref.current;
+    const originalHTML = element.innerHTML;
 
-    // Split text content into words wrapped in span
-    const words = element.textContent?.split(" ") || [];
-    element.innerHTML = words
-      .map(
-        (word) =>
-          `<span style="display:inline-block; opacity:0; transform: translateY(40px); margin-right: 4px">${word}</span>`
-      )
-      .join(" ");
+    // Wrap words preserving nested tags and styles
+    const wrappedHTML = Array.from(element.childNodes).map(wrapWords).join(" ");
+    element.innerHTML = wrappedHTML;
 
-    // Select all word spans
     const wordSpans = element.querySelectorAll("span");
 
-    // GSAP timeline with stagger and scroll trigger
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: element,
@@ -33,15 +46,15 @@ export function useStaggeredFadeUp<T extends HTMLElement>(ref: React.RefObject<T
     tl.to(wordSpans, {
       opacity: 1,
       y: 0,
-      duration: 0.6,
+      duration: 0.8,
       ease: "power3.out",
-      stagger: 0.1,
+      stagger: { each: 0.12 },
     });
 
     return () => {
-      // Cleanup animation & ScrollTrigger instance correctly
       tl.scrollTrigger?.kill();
       tl.kill();
+      element.innerHTML = originalHTML; // Restore original HTML on cleanup
     };
   }, [ref]);
 }

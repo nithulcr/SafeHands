@@ -30,7 +30,7 @@ const Hero = () => {
                                 Get to Know Us
                             </div>
                             <h1 ref={fadeRef} className="fade-up-stagger text-3xl lg:text-[36px] xl:text-[56px] font-semibold mb-1 leading-tight text-site">
-                                Trusted Attestation Services in <br />Dubai, UAE
+                                Trusted Attestation Services in Dubai, UAE
                             </h1>
 
                             <div className="mt-4 lg:mt-10 flex items-center flex-wrap gap-6">

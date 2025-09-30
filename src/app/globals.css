@@ -35,6 +35,9 @@ font-family: "Mona Sans", sans-serif;
 .text-site{
   color: var(--siteColor);
 }
+.text-1{
+  color: var(--color);
+}
 .text-2{
   color: #C4C4C4;
 }
@@ -293,18 +296,6 @@ background-size: contain;
 }
 
 
-
-
-.feature-card:not(:first-child):before {
-  content: "";
-  background: linear-gradient(45deg, #ffffff00, #646464, #ffffff00);
-  width: .05rem;
-  height: 50%;
-  position: absolute;
-  top: 65%;
-  left: 0;
-  transform: translateY(-50%);
-}
 
 .calculator-form select {
   font-size: 13px;
