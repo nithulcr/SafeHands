@@ -66,7 +66,7 @@ export default function Header() {
     return (
         <header
             className={[
-                "content-center fixed top-0 left-0 z-50 bg-[var(--background)] transition-colors duration-300 bg-nav mx-2  md:mx-5 w-[-webkit-fill-available]",
+                "content-center fixed top-0 left-0 z-50  transition-colors duration-300 bg-nav mx-2  md:mx-5 w-[-webkit-fill-available]",
                 scrolled ? "bg-nav-cover" : "mt-2 md:mt-0",
             ]
                 .filter(Boolean)
@@ -147,8 +147,8 @@ export default function Header() {
             </div>
             <div
                 className={
-                    "bg-[var(--background2)] w-full md:mt-3 " +
-                    (scrolled ? "rounded-b-[16px]" : "rounded-t-[16px] border-b border-b-[rgba(0,0,0,0.2)]")
+                    "bg-[var(--background2)] w-full md:mt-3 border-b border-b-[rgba(0,0,0,0.1)] " +
+                    (scrolled ? "rounded-b-[16px]" : "rounded-t-[16px] ")
                 }
             >
                 <div className="max-w-[1250px] mx-auto flex items-center justify-between md:px-6 px-3 h-[80px] main-header z-10 relative">

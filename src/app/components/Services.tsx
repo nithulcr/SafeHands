@@ -8,6 +8,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import AnimatedButton from "./AnimatedButton";
+import Image from "next/image";
+
 
 
 
@@ -31,8 +34,8 @@ const ServicesDataEn = [
       </svg>
 
     ),
-    title: <> Trade License <br /> Assistance </>,
-    description: "Once planning is complete,  site preparation begins.",
+    title: <>1 Birth Certificate Attestation</>,
+    description: "irth Certificate Attestation in the Dubai, UAE verifies the authenticity...",
     link: "/services/trade-license-assistance",
 
   },
@@ -54,7 +57,7 @@ const ServicesDataEn = [
 
 
     ),
-    title: <>PRO<br />Services</>,
+    title: <>2 MOFA Attestation</>,
     description: "Once planning is complete,  site preparation begins.",
     link: "/services/pro-services",
   },
@@ -76,7 +79,7 @@ const ServicesDataEn = [
 
 
     ),
-    title: <>VAT & Tax<br />Consultancy</>,
+    title: <>3 MOFA Attestation</>,
     description: "Once planning is complete,  site preparation begins.",
     link: "/services/vat-tax-consultancy",
   },
@@ -96,7 +99,7 @@ const ServicesDataEn = [
       </svg>
 
     ),
-    title: <>Golden<br />Visa</>,
+    title: <>4 MOFA Attestation</>,
     description: "Once planning is complete,  site preparation begins.",
     link: "/services/golden-visa",
   },
@@ -118,10 +121,12 @@ const ServicesDataEn = [
 
 
     ),
-    title: <>Local Sponsorship &<br />Nominee Services</>,
+    title: <>5 MOFA Attestation</>,
     description: "Once planning is complete,  site preparation begins.",
     link: "/services/local-sponsorship-nominee-services",
   },
+
+
 
 
 
@@ -157,48 +162,61 @@ const Services = () => {
         <div className="service-slide">
           <Swiper
             modules={[Autoplay, Pagination, Navigation]}
-            loop={true}
+            rewind={true}
             autoplay={{
               delay: 4000,
               disableOnInteraction: false,
             }}
+
             speed={2000}
             centeredSlides={true}
+            pagination={{
+              clickable: true,
+            }}
             breakpoints={{
               320: {
+                slidesPerView: 1.5,
+                spaceBetween: 20,
+              },
+              768: {
                 slidesPerView: 2,
                 spaceBetween: 20,
               },
               1024: {
+                slidesPerView: 3.5,
+                spaceBetween: 20,
+              },
+              1300: {
                 slidesPerView: 4,
                 spaceBetween: 20,
               },
             }}
             className="mySwiper cursor-grab"
           >
-            {data.map((choose) => (
-              <SwiperSlide key={choose.id}>
+            {data.map((choose, index) => (
+              <SwiperSlide key={`${choose.id}-${index}`}>
                 <div
-                  className="bg-[rgba(20,90,103,0.5)] rounded-3xl p-3 sm:p-7  relative h-full"
+                  className="group bg-[rgba(20,90,103,0.5)] rounded-3xl p-5 sm:p-7  relative h-full min-h-[240px] lg:min-h-[330px] flex flex-col justify-between relative overflow-hidden"
                 >
-                  <div className="flex flex-col justify-between min-h-[280px]">
-                    {/* Icon + Number */}
-                    <div className="md:w-18 w-12 md:h-18 h-12 flex items-center justify-center rounded-full md:p-5 p-3 bg-[radial-gradient(circle,_#0F4E5A_50%,_#1599B3_100%)] rounded-full">
-                      {choose.icon}
-                    </div>
-                    <h3 className="text-md md:text-lg leading-tight font-semibold text-white mt-2">{choose.title}</h3>
+                  <div className="absolute w-full h-full left-0 top-0 service-card-overlay lg:opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <Image src="/service1.png" alt="service" width={120} height={30} className="object-cover w-full h-full" />
                   </div>
 
-                  <div className="hidden">
-                    <h3 className="text-md md:text-xl leading-tight font-semibold text-center mt-2">{choose.title}</h3>
+                  <div className="md:w-18 w-12 md:h-18 h-12 z-1 group-hover:opacity-0 flex items-center justify-center rounded-full md:p-5 p-3 bg-[radial-gradient(circle,_#0F4E5A_50%,_#1599B3_100%)] rounded-full">
+                    {choose.icon}
+                  </div>
+
+
+                  <div className="relative z-1">
+                    <h3 className="text-lg md:text-xl leading-tight font-semibold text-white mt-2 group-hover:opacity-0 lg:block hidden transition-all duration-500">{choose.title}</h3>
 
                     {/* Description */}
-                    <p className="text-xs sm:text-sm lg:mt-2 hidden md:block">{choose.description}</p>
-                    <Link href={choose.link} className="text-xs sm:text-sm leading-snug mt-5 flex items-center gap-2 justify-center">Learn More
-                      <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.9472 8.46255H2.65417C2.52157 8.46255 2.39439 8.51522 2.30062 8.60899C2.20685 8.70276 2.15417 8.82994 2.15417 8.96255C2.15417 9.09515 2.20685 9.22233 2.30062 9.3161C2.39439 9.40987 2.52157 9.46255 2.65417 9.46255H11.9472L8.30017 13.1085C8.20629 13.2024 8.15354 13.3298 8.15354 13.4625C8.15354 13.5953 8.20629 13.7227 8.30017 13.8165C8.39406 13.9104 8.5214 13.9632 8.65417 13.9632C8.78695 13.9632 8.91429 13.9104 9.00817 13.8165L13.5082 9.31655C13.5547 9.2701 13.5917 9.21492 13.6169 9.15418C13.6421 9.09343 13.6551 9.02831 13.6551 8.96255C13.6551 8.89678 13.6421 8.83166 13.6169 8.77091C13.5917 8.71017 13.5547 8.65499 13.5082 8.60855L9.00817 4.10855C8.91429 4.01466 8.78695 3.96191 8.65417 3.96191C8.5214 3.96191 8.39406 4.01466 8.30017 4.10855C8.20629 4.20243 8.15354 4.32977 8.15354 4.46255C8.15354 4.59532 8.20629 4.72266 8.30017 4.81655L11.9472 8.46255Z" fill="black" />
-                      </svg>
-                    </Link>
+                    <div className="absolute bottom-[0px] z-1  lg:h-0 lg:opacity-0 translate-y-4 group-hover:opacity-100 group-hover:h-auto group-hover:translate-y-0 transition-all duration-500 overflow-hidden">
+                      <h3 className="text-lg md:text-xl leading-tight font-semibold text-white mt-2 ">{choose.title}</h3>
+                      <p className="text-xs text-[#D9D9D9] sm:text-sm lg:mt-2 font-light max-w-[250px]">{choose.description}</p>
+
+                      <AnimatedButton href="{choose.link}" label="Learn More" className="w-fit transparent-btn2 mt-3" />
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>

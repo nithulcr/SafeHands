@@ -14,10 +14,10 @@ const Hero = () => {
 
     return (
         <>
-            <section className="bg-[var(--background2)] hero-section overflow-hidden relative w-full md:min-h-[80vh] rounded-b-[16px] flex flex-col justify-center items-center px-6 relative mt-[85px] lg:mt-[130px] pb-14 lg:pb-[70px] pt-14 lg:pt-[50px]">
+            <section className="bg-[var(--background2)] hero-section overflow-hidden relative w-full md:min-h-[80vh] rounded-[16px] flex flex-col justify-center items-center px-6 relative mt-[85px] lg:mt-[120px] pb-14 lg:pb-[70px] pt-14 lg:pt-[50px]">
 
 
-                <div className="max-w-[1250px]   grid lg:grid-cols-2 gap-5 ">
+                <div className="max-w-[1250px]   grid lg:grid-cols-2 gap-5 px-6">
                     <div className="py-6 lg:py-10 flex items-center">
                         <motion.div initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ const Hero = () => {
                                 Trusted Attestation Services in Dubai, UAE
                             </h1>
 
-                            <div className="mt-4 lg:mt-10 flex items-center flex-wrap gap-6">
+                            <div className="mt-4 lg:mt-5 flex items-center flex-wrap gap-6">
                                 <AnimatedButton href="" label="Talk with Us" className="w-fit" />
                                 <a className="flex items-center gap-4">
 
@@ -47,7 +47,7 @@ const Hero = () => {
                                     </div>
                                 </a>
                             </div>
-                            <div className="mt-8 flex items-center gap-3">
+                            <div className="mt-5 flex items-center gap-3">
                                 <Image src="/review-users.png" alt="Logo" width={120} height={30} className="object-contain" />
                                 <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clipPath="url(#clip0_1279_2500)">
@@ -105,7 +105,7 @@ const Hero = () => {
                     </div>
                     <motion.div initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }} className="relative z-10 max-w-3xl">
+                        transition={{ duration: 0.5 }} className="relative z-10">
 
                         <ContactForm />
 

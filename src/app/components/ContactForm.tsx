@@ -41,26 +41,35 @@ export default function ContactForm() {
 
   return (
     <>
-      <div className="max-w-[500px] p-6 lg:p-8  bg-[var(--siteColor)] rounded-3xl">
-        <div className="mb-8">
-          <h4 className="text-3xl text-white">Get a Quote</h4>
-          <p className="text-2 mt-1">Our Advisor will contact you shortly</p>
+      <div className="p-6 lg:p-8  bg-[var(--siteColor)] rounded-3xl">
+        <div className="mb-6">
+          <h4 className="text-2xl text-white">Get a Quote</h4>
+          <p className="text-2 text-sm mt-1">Our Advisor will contact you shortly</p>
         </div>
 
         <form
           onSubmit={handleSubmit}
-          className="space-y-5"
+          className="flex flex-col gap-4"
         >
-          <div className="grid gap-4">
-
+          <div className="grid md:grid-cols-2 gap-4">
             <input
               name="name"
               className="w-full bg-[#036072] rounded-2xl px-6 py-3 focus:outline-none placeholder-[#BFBCBC]"
               type="text"
-              placeholder={"Name"}
+              placeholder={"First Name"}
+              required
+            />
+            <input
+              name="name"
+              className="w-full bg-[#036072] rounded-2xl px-6 py-3 focus:outline-none placeholder-[#BFBCBC]"
+              type="text"
+              placeholder={"Last Name"}
               required
             />
 
+            
+          </div>
+          <div className="grid md:grid-cols-2 gap-4">
             <input
               name="number"
               className="w-full bg-[#036072] rounded-2xl px-6 py-3 focus:outline-none placeholder-[#BFBCBC]"
@@ -68,8 +77,6 @@ export default function ContactForm() {
               placeholder={"Mobile"}
               required
             />
-          </div>
-          <div>
 
             <input
               name="email"
@@ -89,17 +96,18 @@ export default function ContactForm() {
               required
             />
           </div>
-          <div className="mt-3">
+          <div>
 
             <AnimatedButton type="submit"
-              label="Get a Quote" className="w-full transparent-btn no-icon lg:mt-2" />
+              label="Get a Quote" className="w-full transparent-btn no-icon" />
           </div>
-          <div className="mt-3 justify-self-end message-status">
+          <div className="justify-self-end message-status absolute bottom-[10px] right-[35px]">
             {messageStatus && (
               <p className={`${messageStatus.type === 'success' ? 'text-blue-500' : 'text-red-500'}`}>
-                {messageStatus.message}
+                {messageStatus.message} esfc
               </p>
             )}
+          
           </div>
         </form>
       </div>

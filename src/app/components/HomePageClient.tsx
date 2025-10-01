@@ -4,10 +4,16 @@ import { useState, useEffect } from "react";
 import Preloader from "./Preloader";
 import Header from "./Header";
 import Hero from "./Hero";
-import Marquee from "./Marquee";
+import Features from "./Features";
+import Services from "./Services";
+
+import Countrys from "./Countrys";
 import ThreeStepProcess from "./ThreeStepProcess";
 
-import Features from "./Features";
+
+
+import Marquee from "./Marquee";
+
 
 import AboutUs from "./AboutUs";
 import UaeCompanyCards from "./UaeCompanyCards";
@@ -21,7 +27,6 @@ import CostCalculator from "./CostCalculator";
 
 import ConsultationBanner from "./ConsultationBanner";
 
-import Services from "./Services";
 import Partners from "./Partners";
 import Footer from "./Footer";
 
@@ -56,12 +61,15 @@ export default function HomePageClient() {
           <Hero />
           <Features />
           <Services />
+          <Countrys />
+          <ThreeStepProcess />
+
+
 
           <Marquee />
 
 
           <AboutUs />
-          <ThreeStepProcess />
 
 
           <ConsultationBanner />
