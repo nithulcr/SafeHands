@@ -17,21 +17,21 @@ import Image from "next/image";
 
 const ProcessMainDataEn = [
   {
-    img: ("/Process1.png"),
+    img: ("/process1.png"),
     title: <>Travelling to Australia for Tourism or Business?</>,
     date: "18-08-2025",
     link: "/ProcessMain/trade-license-assistance",
 
   },
   {
-    img: ("/Process1.png"),
+    img: ("/process1.png"),
     title: <>Travelling to Australia for Tourism or Business?</>,
     date: "18-08-2025",
     link: "/ProcessMain/trade-license-assistance",
 
   },
   {
-    img: ("/Process1.png"),
+    img: ("/process1.png"),
     title: <>Travelling to Australia for Tourism or Business?</>,
     date: "18-08-2025",
     link: "/ProcessMain/trade-license-assistance",
