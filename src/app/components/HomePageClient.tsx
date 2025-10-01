@@ -6,28 +6,14 @@ import Header from "./Header";
 import Hero from "./Hero";
 import Features from "./Features";
 import Services from "./Services";
-
 import Countrys from "./Countrys";
 import ThreeStepProcess from "./ThreeStepProcess";
-
-
-
-import Marquee from "./Marquee";
-
-
-import AboutUs from "./AboutUs";
-import UaeCompanyCards from "./UaeCompanyCards";
-
-
-
+import Plans from "./Plans";
 import Testimonials from "./Testimonials";
-import CostCalculator from "./CostCalculator";
+import Process from "./Process";
+import FAQ from "./FAQ";
 
 
-
-import ConsultationBanner from "./ConsultationBanner";
-
-import Partners from "./Partners";
 import Footer from "./Footer";
 
 export default function HomePageClient() {
@@ -63,24 +49,10 @@ export default function HomePageClient() {
           <Services />
           <Countrys />
           <ThreeStepProcess />
-
-
-
-          <Marquee />
-
-
-          <AboutUs />
-
-
-          <ConsultationBanner />
-          <UaeCompanyCards />
+          <Plans />
           <Testimonials />
-
-          <Partners />
-          <CostCalculator />
-
-
-
+          <Process />
+          <FAQ />
 
 
 

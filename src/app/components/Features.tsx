@@ -121,7 +121,7 @@ export default function Features() {
 
     return (
         <section id="features" className="py-12 lg:py-20  relative ">
-            <div className="max-w-[1250px] mx-auto px-6">
+            <div className="max-w-[1250px] mx-auto px-3 lg:px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -141,7 +141,7 @@ export default function Features() {
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.5 }}
+                    viewport={{ once: true, amount: 0.2 }}
                     transition={{ duration: 0.5 }}
                     className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5  relative  ">
                     {features.map((feature) => (

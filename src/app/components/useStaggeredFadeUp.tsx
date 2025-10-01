@@ -6,22 +6,21 @@ gsap.registerPlugin(ScrollTrigger);
 
 function wrapWords(node: ChildNode): string {
   if (node.nodeType === Node.TEXT_NODE) {
-    // Split text nodes by words and wrap each word in span with styles
     return (node.textContent || "")
       .split(/\s+/)
       .map(word => {
         if (!word) return "";
-        return `<span style="display:inline-block;opacity:0;transform:translateY(40px);margin-right:4px">${word}</span>`;
+        return `<span style="display:inline-block;opacity:0;height:0;overflow:hidden;line-height:1.2;margin-right:4px">${word}</span>`;
       })
       .join(" ");
   } else if (node.nodeType === Node.ELEMENT_NODE) {
-    // Recursively process element children preserving tags
     const el = node as HTMLElement;
     const children = Array.from(el.childNodes).map(wrapWords).join(" ");
     return `<${el.tagName.toLowerCase()}${Array.from(el.attributes).map(attr => ` ${attr.name}="${attr.value}"`).join("")}>${children}</${el.tagName.toLowerCase()}>`;
   }
   return "";
 }
+
 
 export function useStaggeredFadeUp<T extends HTMLElement>(ref: React.RefObject<T>) {
   useEffect(() => {
@@ -30,11 +29,25 @@ export function useStaggeredFadeUp<T extends HTMLElement>(ref: React.RefObject<T
     const element = ref.current;
     const originalHTML = element.innerHTML;
 
-    // Wrap words preserving nested tags and styles
+    // Wrap words, preserve nested tags/styles
     const wrappedHTML = Array.from(element.childNodes).map(wrapWords).join(" ");
     element.innerHTML = wrappedHTML;
 
+    // Fix container height to prevent jumping
+const fullHeight = element.offsetHeight;
+const buffer = 8; // pixels to add extra height for comfort
+element.style.height = `${fullHeight + buffer}px`;
+element.style.overflow = "hidden";
+
+
     const wordSpans = element.querySelectorAll("span");
+
+    // Initialize spans styles
+    wordSpans.forEach(span => {
+      span.style.overflow = "hidden";
+      span.style.height = "0px";
+      span.style.opacity = "0";
+    });
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -43,9 +56,10 @@ export function useStaggeredFadeUp<T extends HTMLElement>(ref: React.RefObject<T
       },
     });
 
+    // Animate height to auto and fade in opacity staggered
     tl.to(wordSpans, {
+      height: "auto",
       opacity: 1,
-      y: 0,
       duration: 0.8,
       ease: "power3.out",
       stagger: { each: 0.12 },
@@ -54,7 +68,9 @@ export function useStaggeredFadeUp<T extends HTMLElement>(ref: React.RefObject<T
     return () => {
       tl.scrollTrigger?.kill();
       tl.kill();
-      element.innerHTML = originalHTML; // Restore original HTML on cleanup
+      element.innerHTML = originalHTML; // Restore on cleanup
+      element.style.height = "";        // Reset height
+      element.style.overflow = "";
     };
   }, [ref]);
 }

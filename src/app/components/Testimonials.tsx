@@ -7,13 +7,15 @@ import 'swiper/css/navigation';
 import { useRef, useState, useEffect } from 'react';
 import type { SwiperOptions } from 'swiper/types';
 import AnimatedButton from "./AnimatedButton";
+import { motion } from "framer-motion";
+import { useStaggeredFadeUp } from "./useStaggeredFadeUp";
 
 interface Testimonial {
-  name: string;
-  role: string;
-  rating: number;
-  review: string;
-  avatar: string;
+    name: string;
+    role: string;
+    rating: number;
+    review: string;
+    avatar: string;
 }
 
 // Example avatars (replace src paths with your actual assets)
@@ -62,37 +64,49 @@ export default function Testimonials() {
         setNavigationReady(true);
     }, []);
 
-    return (
-        <section className="bg-[var(--blue)] testimonials-section overflow-hidden relative lg:py-30 py-14 text-white">
-            <div className="mx-auto  max-w-[1320px] lg:pl-6  flex flex-col items-center justify-center">
-                <div className="max-w-[640px] mx-auto mb-8">
-                    <h2 className="text-2xl lg:text-[40px] font-medium  text-center">
-                        <span className='font-light2'>Read Reviews,</span><br></br>
-                        Ride with Confidence
-                    </h2>
+    const fadeRef = useRef<HTMLHeadingElement>(null);
+        useStaggeredFadeUp(fadeRef as React.RefObject<HTMLElement>);
 
-                </div>
+    return (
+        <section className="bg-[#D5E5E3] rounded-3xl testimonials-section overflow-hidden relative lg:py-24 py-14 ">
+            <div className="mx-auto  max-w-[1250px] lg:pl-6  flex flex-col items-center justify-center">
+               <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.5 }} className="heading flex flex-col items-center max-w-[550px] mx-auto mb-10">
+                    <div className="flex items-center gap-2 text-site mb-3 uppercase text-sm">
+                        <svg width="20" height="20" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.0742 0.86853L16.0966 5.58161L19.6848 0.86853H17.0742ZM24.7565 1.85392L18.6755 8.84619L24.7565 6.31989V1.85392ZM9.19522 4.23193C9.16211 4.23246 9.12956 4.23372 9.0968 4.23525C8.61387 4.2575 8.16395 4.37421 7.79238 4.63566C6.93093 5.24169 7.21881 6.59506 6.63559 7.96289C4.64293 12.636 2.62996 16.0252 0.851196 18.5263V23.9777C3.97841 22.8521 8.63611 21.6856 15.4428 21.4513C16.8711 21.4023 17.9681 22.1148 18.8246 21.5124C20.939 20.0249 20.1735 15.0541 17.1346 10.3953C16.9446 10.1042 16.7677 9.80785 16.5696 9.53342C14.193 6.24142 11.282 4.20287 9.19511 4.23203L9.19522 4.23193ZM8.92227 5.52392C8.57919 6.25656 8.90135 7.83685 9.73162 9.78222C9.46959 8.79999 9.49356 8.08723 9.86807 7.85083C10.6869 7.33392 12.8669 9.28388 14.7367 12.2064C16.6065 15.1287 17.4582 17.917 16.6395 18.4339C16.3026 18.6466 15.7351 18.4412 15.0541 17.923C16.4616 19.4045 17.732 20.2702 18.512 20.2252C18.4214 20.3924 18.3254 20.5545 18.1819 20.6554C16.8159 21.6165 13.5225 19.0602 10.8361 14.942C8.14973 10.8237 7.0849 6.69747 8.45092 5.73649C8.59092 5.63809 8.74463 5.55055 8.92227 5.52392ZM24.7565 11.6181L20.456 13.0649L24.7565 13.7423V11.6181Z" fill="#09424D" />
+                        </svg>
+                       read reviews
+                    </div>
+                    <h2 ref={fadeRef} className="text-center fade-up-stagger text-2xl lg:text-[36px] font-medium mb-1 leading-tight text-site">
+                       Ride with Confidence
+                    </h2>
+                </motion.div>
 
                 <div className="w-full  lg:mt-10 flex gap-12">
                     <div className='min-w-[150px] hidden sm:block '>
-                        <svg width="70" height="70" viewBox="0 0 88 77" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M60.25 76.5186C57.3768 76.5186 54.6213 75.3772 52.5897 73.3455C50.558 71.3139 49.4167 68.5584 49.4167 65.6852L49.4167 33.1852C49.4167 16.2311 58.3542 5.05648 75.1838 0.847731C75.8757 0.669143 76.5961 0.62921 77.3035 0.730254C78.0109 0.831298 78.6913 1.07132 79.3055 1.43648C79.9198 1.80164 80.4557 2.28473 80.8824 2.85792C81.3091 3.43111 81.6182 4.08305 81.7918 4.77621C81.9655 5.46938 82.0003 6.19005 81.8942 6.89671C81.7881 7.60337 81.5432 8.28205 81.1737 8.89367C80.8041 9.50528 80.3172 10.0377 79.741 10.4603C79.1648 10.8829 78.5106 11.1874 77.8163 11.3561C65.7533 14.3731 60.25 21.2523 60.25 33.1852L60.25 38.6019L76.5 38.6019C79.2331 38.601 81.8656 39.6333 83.8696 41.4917C85.8737 43.3501 87.1013 45.8973 87.3063 48.6227L87.3333 49.4352L87.3333 65.6852C87.3333 68.5584 86.192 71.3139 84.1603 73.3455C82.1287 75.3772 79.3732 76.5186 76.5 76.5186L60.25 76.5186ZM11.5 76.5185C8.62682 76.5185 5.87132 75.3772 3.83968 73.3455C1.80803 71.3139 0.666665 68.5584 0.666665 65.6852L0.666668 33.1852C0.666669 16.2311 9.60417 5.05647 26.4338 0.847727C27.1257 0.669138 27.8461 0.629206 28.5535 0.73025C29.2609 0.831294 29.9413 1.07131 30.5555 1.43648C31.1698 1.80164 31.7057 2.28472 32.1324 2.85791C32.5591 3.4311 32.8682 4.08305 33.0418 4.77621C33.2155 5.46937 33.2503 6.19004 33.1442 6.8967C33.0381 7.60337 32.7932 8.28205 32.4237 8.89366C32.0541 9.50527 31.5672 10.0377 30.991 10.4603C30.4148 10.8829 29.7606 11.1874 29.0663 11.3561C17.0033 14.3731 11.5 21.2523 11.5 33.1852L11.5 38.6019L27.75 38.6019C30.4831 38.601 33.1156 39.6333 35.1196 41.4917C37.1237 43.3501 38.3513 45.8973 38.5563 48.6227L38.5833 49.4352L38.5833 65.6852C38.5833 68.5584 37.442 71.3139 35.4103 73.3455C33.3787 75.3772 30.6232 76.5185 27.75 76.5185L11.5 76.5185Z" fill="#4F4BA1" />
+                        <svg width="87" height="77" viewBox="0 0 87 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M59.6377 76.1558C56.7646 76.1558 54.0091 75.0144 51.9774 72.9827C49.9458 70.9511 48.8044 68.1956 48.8044 65.3224L48.8044 32.8224C48.8044 15.8683 57.7419 4.69368 74.5715 0.484939C75.2634 0.30635 75.9838 0.266418 76.6912 0.367461C77.3986 0.468505 78.079 0.708526 78.6933 1.07369C79.3075 1.43885 79.8434 1.92194 80.2701 2.49512C80.6968 3.06831 81.0059 3.72026 81.1796 4.41342C81.3532 5.10658 81.388 5.82725 81.2819 6.53391C81.1758 7.24058 80.9309 7.91926 80.5614 8.53088C80.1919 9.14249 79.705 9.67493 79.1287 10.0975C78.5525 10.5202 77.8984 10.8246 77.204 10.9933C65.1411 14.0103 59.6377 20.8895 59.6377 32.8224L59.6377 38.2391L75.8877 38.2391C78.6209 38.2382 81.2533 39.2705 83.2574 41.1289C85.2614 42.9873 86.489 45.5345 86.694 48.2599L86.7211 49.0724L86.7211 65.3224C86.7211 68.1956 85.5797 70.9511 83.5481 72.9828C81.5164 75.0144 78.7609 76.1558 75.8877 76.1558L59.6377 76.1558ZM10.8877 76.1558C8.01455 76.1558 5.25905 75.0144 3.2274 72.9827C1.19576 70.9511 0.0543906 68.1956 0.0543909 65.3224L0.0543937 32.8224C0.0543952 15.8683 8.9919 4.69368 25.8215 0.484934C26.5134 0.306345 27.2338 0.266413 27.9412 0.367457C28.6486 0.468501 29.329 0.708522 29.9433 1.07369C30.5575 1.43885 31.0934 1.92193 31.5201 2.49512C31.9468 3.06831 32.2559 3.72026 32.4296 4.41342C32.6032 5.10658 32.638 5.82725 32.5319 6.53391C32.4258 7.24057 32.1809 7.91925 31.8114 8.53087C31.4418 9.14248 30.955 9.67493 30.3787 10.0975C29.8025 10.5202 29.1484 10.8246 28.454 10.9933C16.3911 14.0103 10.8877 20.8895 10.8877 32.8224L10.8877 38.2391L27.1377 38.2391C29.8709 38.2382 32.5033 39.2705 34.5074 41.1289C36.5114 42.9873 37.739 45.5345 37.944 48.2599L37.9711 49.0724L37.9711 65.3224C37.9711 68.1956 36.8297 70.9511 34.7981 72.9827C32.7664 75.0144 30.0109 76.1558 27.1377 76.1558L10.8877 76.1558Z" fill="#09424D" />
                         </svg>
-                        <h5 className='text-xl mt-4 block'>What our<br></br>
+
+                        <h5 className='text-xl text-site mt-4 block'>What our<br></br>
                             costomers are<br></br>
                             saying</h5>
                         <div className='slider-arrows flex gap-4  mt-5'>
                             <span className='cursor-pointer' ref={prevRef}>
                                 <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 22.6021C6.477 22.6021 2 18.1251 2 12.6021C2 7.07905 6.477 2.60205 12 2.60205C17.523 2.60205 22 7.07905 22 12.6021C22 18.1251 17.523 22.6021 12 22.6021Z" stroke="white" strokeWidth="2" strokeLinejoin="round" />
-                                    <path d="M13.5 17.1021L9 12.6021L13.5 8.10205" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path d="M12 22.6021C6.477 22.6021 2 18.1251 2 12.6021C2 7.07905 6.477 2.60205 12 2.60205C17.523 2.60205 22 7.07905 22 12.6021C22 18.1251 17.523 22.6021 12 22.6021Z" stroke="var(--siteColor)" strokeWidth="2" strokeLinejoin="round" />
+                                    <path d="M13.5 17.1021L9 12.6021L13.5 8.10205" stroke="var(--siteColor)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
 
                             </span>
                             <span className='cursor-pointer' ref={nextRef}>
                                 <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 22.6021C17.523 22.6021 22 18.1251 22 12.6021C22 7.07905 17.523 2.60205 12 2.60205C6.477 2.60205 2 7.07905 2 12.6021C2 18.1251 6.477 22.6021 12 22.6021Z" stroke="white" strokeWidth="2" strokeLinejoin="round" />
-                                    <path d="M10.5 17.1021L15 12.6021L10.5 8.10205" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path d="M12 22.6021C17.523 22.6021 22 18.1251 22 12.6021C22 7.07905 17.523 2.60205 12 2.60205C6.477 2.60205 2 7.07905 2 12.6021C2 18.1251 6.477 22.6021 12 22.6021Z" stroke="var(--siteColor)" strokeWidth="2" strokeLinejoin="round" />
+                                    <path d="M10.5 17.1021L15 12.6021L10.5 8.10205" stroke="var(--siteColor)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
 
                             </span>
@@ -100,7 +114,7 @@ export default function Testimonials() {
                         </div>
 
                     </div>
-                    <div className='w-full cursor-grab'>
+                    <div className='w-full cursor-grab text-white'>
                         <Swiper
                             modules={[Autoplay, Navigation]}
                             navigation={{
@@ -113,6 +127,7 @@ export default function Testimonials() {
                                     swiper.params.navigation.nextEl = nextRef.current;
                                 }
                             }}
+                            speed={2000}
                             spaceBetween={16}
                             slidesPerView={1.2}
                             autoplay={{
@@ -130,7 +145,7 @@ export default function Testimonials() {
                         >
                             {testimonialsItems.map((item, idx) => (
                                 <SwiperSlide key={idx}>
-                                    <div className="bg-[var(--blue1)] rounded-[16px] lg:rounded-[26px]  p-4  lg:p-6  relative  flex flex-col h-full  ">
+                                    <div className="bg-[var(--siteColor)] rounded-[16px] lg:rounded-[26px]  p-4  lg:p-6  relative  flex flex-col h-full  ">
 
                                         <div className="flex items-center gap-2 mb-2">
                                             <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -189,7 +204,8 @@ export default function Testimonials() {
                         </Swiper>
                     </div>
                 </div>
-                <AnimatedButton  label="Write a review" className="w-fit text-white mt-6 lg:mt-16 mx-auto" />
+                 <AnimatedButton type="submit"
+                              label="Write a review" className="w-fit no-icon mt-12 md:mt-16 px-5" />
 
 
             </div>

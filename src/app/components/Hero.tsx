@@ -14,7 +14,7 @@ const Hero = () => {
 
     return (
         <>
-            <section className="bg-[var(--background2)] hero-section overflow-hidden relative w-full md:min-h-[80vh] rounded-[16px] flex flex-col justify-center items-center px-6 relative mt-[85px] lg:mt-[120px] pb-14 lg:pb-[70px] pt-14 lg:pt-[50px]">
+            <section className="bg-[var(--background2)] hero-section overflow-hidden relative w-full md:min-h-[80vh] rounded-[16px] flex flex-col justify-center items-center relative mt-[75px] lg:mt-[85px] lg:mt-[120px] pb-14 lg:pb-[70px] pt-14 lg:pt-[50px]">
 
 
                 <div className="max-w-[1250px]   grid lg:grid-cols-2 gap-5 px-6">

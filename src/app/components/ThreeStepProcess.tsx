@@ -29,7 +29,7 @@ export default function ThreeStepProcess() {
     const fadeRef = useRef<HTMLHeadingElement>(null);
     useStaggeredFadeUp(fadeRef as React.RefObject<HTMLElement>);
     return (
-        <section className="bg-[#D5E5E3] py-14 lg:py-26 rounded-3xl">
+        <section className="bg-[#D5E5E3] py-14 lg:py-24 rounded-3xl">
             <div className="max-w-[1250px] mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -61,7 +61,7 @@ export default function ThreeStepProcess() {
                             <svg  width="54" height="54" viewBox="0 0 57 58" fill="none" xmlns="http://www.w3.org/2000/svg" className="process-card-svg">
                                 <circle cx="28.7426" cy="29.1167" r="28.1875" fill="#D5E5E3" />
                                 <circle cx="28.7425" cy="29.1165" r="22.3797" fill="white" />
-                                <path d="M21.3978 29.1167H23.2606M33.3197 29.1167L28.849 24.646M33.3197 29.1167L28.849 33.5874M33.3197 29.1167H25.496" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M21.3978 29.1167H23.2606M33.3197 29.1167L28.849 24.646M33.3197 29.1167L28.849 33.5874M33.3197 29.1167H25.496" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                             <div className="gradient-text mb-4 text-7xl md:text-9xl font-semibold bg-[linear-gradient(180deg,#09424D_16%,#FFFFFF_88%)] bg-clip-text text-transparent">
                                 {step.number}

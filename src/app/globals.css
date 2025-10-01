@@ -266,7 +266,14 @@ background-size: contain;
   gap: 20px;
   overflow: hidden;
 }
-
+.px-5 .button-text{
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.justify-between .button-text {
+    justify-content: space-between;
+    width: 100%;
+}
 .transparent-btn .button-text {
   color: #000000;
 
@@ -275,6 +282,11 @@ background-size: contain;
   background: transparent;
   padding-left: 0;
   padding-right: 0;
+}
+.button.transparent-btn3 .button-text{
+  color: var(--siteColor);
+  font-weight: 500!important;
+
 }
 .button.transparent-btn2 .button-text > .btn-svg {
     background: #46ADC0;
@@ -285,6 +297,18 @@ background-size: contain;
     align-items: center;
     justify-content: center;
 }
+.button.transparent-btn4 .button-text > .btn-svg {
+    background: var(--siteColor);
+
+}
+.button.transparent-btn3 .button-text > .btn-svg {
+    background: var(--siteColor);
+
+}
+.button.transparent-btn4 .button-text {
+  gap: 40px;
+
+}
 .button.transparent-btn2 .button-text > .btn-svg svg {
    width: 12px;
    height: 12px;
@@ -293,6 +317,9 @@ background-size: contain;
   fill: white;
 }
 
+.button.transparent-btn4 .btn-svg svg path{
+  fill: white;
+}
 
 /* button style end */
 .service-card-overlay:before{
@@ -317,6 +344,22 @@ height: 5px;
   background-color: white!important;
   width: 35px;
 }
+
+.process-slide .swiper{
+  padding-bottom: 60px!important;
+}
+.process-slide .swiper-pagination span{
+background-color: #94AFB4;
+width: 12px;
+border-radius: 5px;
+height: 5px;
+opacity: 1!important;
+}
+.process-slide .swiper-pagination .swiper-pagination-bullet-active{
+  background-color: var(--siteColor)!important;
+  width: 35px;
+}
+
 .process-card-svg{
   position: absolute;
   right: -36px;
@@ -326,6 +369,9 @@ height: 5px;
 }
 .process-card:last-child .process-card-svg{
   display: none;
+}
+h1 span{
+  line-height: 1!important;
 }
 .marquee-img {
   position: relative;
@@ -386,6 +432,9 @@ height: 5px;
   .bg-nav-cover {
     top: 0px;
   }
+  .process-slide .swiper{
+  padding-left: 20px;
+}
 }
 @media (max-width: 768px) {
   .process-card-svg{
