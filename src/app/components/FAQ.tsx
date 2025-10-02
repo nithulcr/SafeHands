@@ -79,13 +79,14 @@ export default function FaqAccordion() {
             Need Help? Start Here...
           </h2>
         </motion.div>
-        <div className="w-full space-y-5">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="w-full space-y-5">
           {faqs.map((faq, idx) => (
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5 }}
+            <div
               key={idx}
               className={`rounded-xl overflow-hidden bg-white duration-200 border border-transparent lg:py-5 py-4`}
             >
@@ -145,9 +146,10 @@ export default function FaqAccordion() {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </motion.div>
+            </div>
+
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

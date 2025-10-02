@@ -10,7 +10,7 @@ import AnimatedButton from "./AnimatedButton";
 
 const navItems = [
     { href: "/", label: "Home" },
-    { href: "/AboutUs", label: "About us" },
+    { href: "/", label: "About us" },
     {
         label: "Country",
         href: "/our-country",
@@ -23,7 +23,7 @@ const navItems = [
     },
     {
         label: "Services",
-        href: "/our-services",
+        href: "/",
         submenu: [
             { href: "/services/machine-tools", label: "Machine Tools" },
             { href: "/services/fabrication-automation", label: "Fabrication & Automation" },
@@ -31,8 +31,8 @@ const navItems = [
             { href: "/services/heat-treatment", label: "Heat Treatment" },
         ],
     },
-    { href: "/Blog", label: "Blog" },
-    { href: "/ContactUs", label: "Contact" },
+    { href: "/", label: "Blog" },
+    { href: "/", label: "Contact" },
 ];
 
 export default function Header() {

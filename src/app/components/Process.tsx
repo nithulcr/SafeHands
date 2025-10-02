@@ -86,7 +86,11 @@ const ProcessMain = () => {
             </span>
           </div>
         </motion.div>
-        <div className="process-slide -mr-9 -ml-9 md:mx-0">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }} className="process-slide -mr-9 -ml-9 md:mx-0">
           <Swiper
             modules={[Pagination, Navigation]}
             loop={true}
@@ -142,7 +146,7 @@ const ProcessMain = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </motion.div>
 
       </div>
     </section>
