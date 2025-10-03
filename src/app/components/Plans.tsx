@@ -72,7 +72,7 @@ export default function UaeCompanyCards() {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.5 }} className="flex overflow-auto md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 -mr-6 -ml-6 md:m-0 pl-6 pr-6 md:p-0">
+                    transition={{ duration: 0.5 }} className="flex overflow-auto md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 -mr-5 -ml-5 md:m-0 pl-6 pr-6 md:p-0">
                     {cards.map((card, idx) => (
                         <div key={idx} className="bg-[#F6F6F6] rounded-xl  overflow-hidden flex flex-col min-w-[280px]">
 
