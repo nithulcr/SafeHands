@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+
 import React, { useRef } from "react";
 import { useStaggeredFadeUp } from "./useStaggeredFadeUp";
 import { motion } from "framer-motion";
@@ -183,14 +183,14 @@ const Services = () => {
         </motion.div>
         <div className="service-slide">
           <Swiper
-            modules={[Pagination, Navigation]}
+            modules={[Autoplay, Pagination, Navigation]}
             loop={true}
             
             
-            // autoplay={{
-            //   delay: 4000,
-            //   disableOnInteraction: false,
-            // }}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+            }}
 
             speed={2000}
             // centeredSlides={true}
@@ -213,7 +213,7 @@ const Services = () => {
                 spaceBetween: 20,
               },
               1300: {
-                slidesPerView: 4,
+                slidesPerView: 4.5,
                 spaceBetween: 20,
               },
             }}

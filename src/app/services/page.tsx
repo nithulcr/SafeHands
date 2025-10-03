@@ -17,7 +17,7 @@ export async function generateMetadata(
 }
 
 import Header from "../components/Header";
-import ServicesFull from "../components/ServicesFull";
+import Services from "../components/Services";
 import Partners from "../components/Partners";
 import CostCalculator from "../components/CostCalculator";
 
@@ -31,12 +31,12 @@ import Footer from "../components/Footer";
 
 
 
-export default function Services() {
+export default function ServicesPage() {
     return (
         <>
             <Header />
            
-            <ServicesFull />
+            <Services />
           
             <ConsultationBanner />
             <Partners />

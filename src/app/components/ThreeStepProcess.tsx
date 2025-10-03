@@ -29,7 +29,7 @@ export default function ThreeStepProcess() {
     const fadeRef = useRef<HTMLHeadingElement>(null);
     useStaggeredFadeUp(fadeRef as React.RefObject<HTMLElement>);
     return (
-        <section className="bg-[#D5E5E3] py-14 lg:py-24 rounded-3xl">
+        <section className="bg-[#D5E5E3] py-14 lg:py-24 rounded-3xl relative bottom-shape overflow-hidden">
             <div className="max-w-[1250px] mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

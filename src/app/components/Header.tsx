@@ -10,7 +10,7 @@ import AnimatedButton from "./AnimatedButton";
 
 const navItems = [
     { href: "/", label: "Home" },
-    { href: "/", label: "About us" },
+    { href: "/AboutUs", label: "About us" },
     {
         label: "Country",
         href: "/our-country",
@@ -23,7 +23,7 @@ const navItems = [
     },
     {
         label: "Services",
-        href: "/",
+        href: "/services",
         submenu: [
             { href: "/services/machine-tools", label: "Machine Tools" },
             { href: "/services/fabrication-automation", label: "Fabrication & Automation" },
@@ -31,8 +31,8 @@ const navItems = [
             { href: "/services/heat-treatment", label: "Heat Treatment" },
         ],
     },
-    { href: "/", label: "Blog" },
-    { href: "/", label: "Contact" },
+    { href: "/blog", label: "Blog" },
+    { href: "/ContactUs", label: "Contact" },
 ];
 
 export default function Header() {
@@ -56,6 +56,14 @@ export default function Header() {
     };
 
     useEffect(() => {
+        if (pathname === "/") {
+            document.body.classList.add("index-page");
+        } else {
+            document.body.classList.remove("index-page");
+        }
+    }, [pathname]);
+
+    useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
         };
@@ -66,17 +74,19 @@ export default function Header() {
     return (
         <header
             className={[
-                "content-center fixed top-0 left-0 z-50  transition-colors duration-300 bg-nav mx-2  md:mx-5 w-[-webkit-fill-available]",
-                scrolled ? "bg-nav-cover" : "mt-2 md:mt-0",
+                "content-center fixed top-0  left-0 z-50  transition-colors duration-300 bg-nav mx-2  md:mx-5 w-[-webkit-fill-available]",
+                scrolled ? "bg-nav-cover" : "",
+                pathname === "/" ? "index mt-2 md:mt-0" : "",
             ]
                 .filter(Boolean)
                 .join(" ")}
         >
-            <div className="w-full bg-[var(--siteColor)] hidden min-[990px]:block rounded-b-[16px]">
+            {pathname === "/" && (
+                <div className="w-full bg-[var(--siteColor)] hidden min-[990px]:block rounded-b-[16px]">
                 <div className="text-white grid grid-cols-2 items-center text-sm max-w-[1250px] mx-auto">
                     <div className="h-full">
                         <div className="h-full max-w-[660px] flex items-center space-x-6 top-header-left relative ml-auto px-6 py-2">
-                            <p>Are you ready to grow up your business?</p>
+                            <p className="font-light">Are you ready to grow up your business?</p>
                             <a href="ContactUs" className="flex items-center space-x-2 font-bold pr-5">
                                 Contact Us
                                 <svg className="ml-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,7 +108,7 @@ export default function Header() {
                                     />
                                 </svg>
 
-                                <span>Working: 8.00am - 5.00pm</span>
+                                <span className="font-light">Working: 8.00am - 5.00pm</span>
                             </div>
                             <div className="flex flex-row gap-4 relative h-full header-top-social items-center">
 
@@ -144,11 +154,13 @@ export default function Header() {
                         </div>
                     </div>
                 </div>
-            </div>
+                </div>
+            )}
             <div
                 className={
-                    "bg-[var(--background2)] w-full md:mt-3 border-b border-b-[rgba(0,0,0,0.1)] " +
-                    (scrolled ? "rounded-b-[16px]" : "rounded-t-[16px] ")
+                    "second-header bg-[var(--background2)] w-full border-b  border-b-[rgba(0,0,0,0.1)] " +
+                    (scrolled ? "rounded-b-[16px] " : " ") +
+                    (pathname === "/" ? " md:mt-3 rounded-t-[16px]" : "rounded-b-[16px]")
                 }
             >
                 <div className="max-w-[1250px] mx-auto flex items-center justify-between md:px-6 px-3 h-[80px] main-header z-10 relative">

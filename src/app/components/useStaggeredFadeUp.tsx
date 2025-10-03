@@ -10,7 +10,7 @@ function wrapWords(node: ChildNode): string {
       .split(/\s+/)
       .map(word => {
         if (!word) return "";
-        return `<span style="display:inline-block;opacity:0;height:0;overflow:hidden;line-height:1.2;margin-right:4px">${word}</span>`;
+        return `<span style="display:inline-block;opacity:0;height:0;overflow:hidden;line-height:1.1;margin-right:4px">${word}</span>`;
       })
       .join(" ");
   } else if (node.nodeType === Node.ELEMENT_NODE) {
@@ -35,7 +35,7 @@ export function useStaggeredFadeUp<T extends HTMLElement>(ref: React.RefObject<T
 
     // Fix container height to prevent jumping
 const fullHeight = element.offsetHeight;
-const buffer = 8; // pixels to add extra height for comfort
+const buffer = 10; // pixels to add extra height for comfort
 element.style.height = `${fullHeight + buffer}px`;
 element.style.overflow = "hidden";
 
@@ -52,7 +52,7 @@ element.style.overflow = "hidden";
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: element,
-        start: "top 80%",
+        start: "top 90%",
       },
     });
 

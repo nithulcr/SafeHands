@@ -1,27 +1,14 @@
+"use client";
 import { Metadata, ResolvingMetadata } from 'next';
 import Image from "next/image";
+import React, { useRef } from "react";
+import { motion } from "framer-motion";
+import { useStaggeredFadeUp } from "../components/useStaggeredFadeUp";
 
-export async function generateMetadata(
-  parent: ResolvingMetadata
-): Promise<Metadata> {
-
-    const metadata: Metadata = {
-    title: 'Inspo',
-    description: '',
-    keywords: '',
-  };
-
-  return metadata;
-}
 
 import Header from "../components/Header";
-import Partners from "../components/Partners";
-
-import CostCalculator from "../components/CostCalculator";
-
-
-
-import ConsultationBanner from "../components/ConsultationBanner";
+import Hero2 from "../components/Hero2";
+import Features from "../components/Features";
 
 import Footer from "../components/Footer";
 
@@ -30,29 +17,19 @@ import Footer from "../components/Footer";
 
 
 export default function Home() {
+  const fadeRef = useRef<HTMLHeadingElement>(null);
+  useStaggeredFadeUp(fadeRef as React.RefObject<HTMLElement>);
   return (
     <>
       <Header />
-      <section className="py-14 lg:py-20    mt-[70] lg:mt-[100px] bg-[#F6F6F6]">
-        <div className="max-w-[1320px] mx-auto px-6 flex flex-col gap-6 lg:gap-12">
-          <div>
-            <span className='text-[#5D666F]'>About inspo</span>
-            <h1 className='text-4xl lg:text-[36px] xl:text-[48px] font-bold mb-1 leading-tight max-w-[500px]'>Smart and effective business agency.</h1>
-          </div>
-          <Image
-            src="/about-us-banner.png"
-            alt="Business for Success"
-            width={550}
-            height={550}
-            className="object-cover f-full  rounded-[16px] w-full"
-          />
-          <p className='text-[#434343]'>Welcome to Top One Business Administrative Services, your strategic ally in establishing and growing your business in Dubai. Our inception was driven by the ambition to simplify the intricate process of business setup, recognizing the challenges that often deter aspiring entrepreneurs.At Top One, we go beyond conventional consultancy. Our tailored package deals, featuring virtual office space, smart desks, meeting rooms, and more, offer comprehensive solutions. With a focus on efficiency, helpfulness, and cost-effectiveness, we not only guide you through the maze of business setup but also ensure the lowest Dubai trade license costs.</p>
-
-        </div>
-
-      </section>
-      <section className="pt-14 pb-18 lg:pt-20 lg:pb-30  ">
-        <div className="max-w-[1320px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
+      <Hero2
+        heading_en="About Us"
+        breadcrumbText_en="About Us"
+        breadcrumbPosition="left"
+      />
+      <Features />
+      <section className="bg-[#D5E5E3] py-14 lg:py-24 rounded-3xl relative top-shape overflow-hidden">
+        <div className="max-w-[1250px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
           <div className="relative flex justify-center  lg:flex h-full">
 
             <Image
@@ -65,26 +42,64 @@ export default function Home() {
 
 
           </div>
-          <div className="flex flex-col gap-4 lg:gap-5 ">
-            <div className='text-[var(--blue)] flex gap-3 items-center'>
-              <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21.7615 3.02725L21.8719 3.021L22.0073 3.02933L22.101 3.046L22.2292 3.08245L22.3406 3.13037L22.4448 3.18975L22.5385 3.25954L22.624 3.33766L22.6781 3.39912L22.7635 3.51995L22.8177 3.61995C22.8663 3.72412 22.8976 3.83384 22.9115 3.94912L22.9167 4.05954C22.9167 4.13801 22.9083 4.2144 22.8917 4.2887L22.8552 4.41683L16.051 23.247C15.9221 23.5278 15.7152 23.7657 15.455 23.9325C15.1949 24.0992 14.8923 24.1878 14.5833 24.1877C14.3051 24.1882 14.0314 24.1169 13.7889 23.9806C13.5463 23.8442 13.3431 23.6475 13.199 23.4095L13.1312 23.2772L9.63958 16.296L2.69167 12.821C2.43458 12.7034 2.21288 12.5204 2.04872 12.2903C1.88457 12.0601 1.78371 11.7909 1.75625 11.5095L1.75 11.3543C1.75 10.771 2.06354 10.2377 2.62604 9.92725L2.77188 9.85433L21.5396 3.07725L21.65 3.046L21.7615 3.02725Z" fill="#2B286B" />
-              </svg>
+          <div className="flex flex-col">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5 }} className="heading flex flex-col gap-4   mb-10">
 
-              WHAT ABOUT US
-            </div>
+              <div className="flex items-center gap-2 text-site mb-3 uppercase text-sm justify-center md:justify-start">
+                <svg width="20" height="20" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.0742 0.86853L16.0966 5.58161L19.6848 0.86853H17.0742ZM24.7565 1.85392L18.6755 8.84619L24.7565 6.31989V1.85392ZM9.19522 4.23193C9.16211 4.23246 9.12956 4.23372 9.0968 4.23525C8.61387 4.2575 8.16395 4.37421 7.79238 4.63566C6.93093 5.24169 7.21881 6.59506 6.63559 7.96289C4.64293 12.636 2.62996 16.0252 0.851196 18.5263V23.9777C3.97841 22.8521 8.63611 21.6856 15.4428 21.4513C16.8711 21.4023 17.9681 22.1148 18.8246 21.5124C20.939 20.0249 20.1735 15.0541 17.1346 10.3953C16.9446 10.1042 16.7677 9.80785 16.5696 9.53342C14.193 6.24142 11.282 4.20287 9.19511 4.23203L9.19522 4.23193ZM8.92227 5.52392C8.57919 6.25656 8.90135 7.83685 9.73162 9.78222C9.46959 8.79999 9.49356 8.08723 9.86807 7.85083C10.6869 7.33392 12.8669 9.28388 14.7367 12.2064C16.6065 15.1287 17.4582 17.917 16.6395 18.4339C16.3026 18.6466 15.7351 18.4412 15.0541 17.923C16.4616 19.4045 17.732 20.2702 18.512 20.2252C18.4214 20.3924 18.3254 20.5545 18.1819 20.6554C16.8159 21.6165 13.5225 19.0602 10.8361 14.942C8.14973 10.8237 7.0849 6.69747 8.45092 5.73649C8.59092 5.63809 8.74463 5.55055 8.92227 5.52392ZM24.7565 11.6181L20.456 13.0649L24.7565 13.7423V11.6181Z" fill="#09424D" />
+                </svg>
+                Get to Know Us
+              </div>
+              <h2 ref={fadeRef} className="text-center md:text-left fade-up-stagger text-2xl lg:text-[36px] max-w-[500px] font-medium mb-1 leading-tight text-site">
+                Driving Innovation and Excellence for Sustainable Corporate Success Worldwide
+              </h2>
 
-            <h2 className="text-2xl lg:text-[40px] font-medium leading-tight max-w-[500px]">Inspiring Vision, Empowering
-              Growth: The INSPO
-              Corporate Story.</h2>
-            <div className="leading-relaxed text-[#A7A9AC] flex flex-col gap-3">
-              <p>Welcome to INSPO Corporate Services, your trusted partner in turning ideas into thriving businesses in the UAE. Our mission is simple yet powerful: to remove the complexities of business setup and provide clear, reliable, and cost-effective solutions tailored for every entrepreneur.</p>
-              <p>At INSPO, we believe in more than just consultancy — we believe in building futures. From trade license services to PRO solutions, compliance assistance, and customized business support, we craft end-to-end strategies that empower you to focus on what matters most: growing your business.</p>
-              <p>Guided by our core values of integrity, efficiency, and innovation, our team of experts ensures that every step of your journey is seamless. Whether you’re a startup, SME, or expanding enterprise, we stand by your side as a dedicated ally, making Dubai’s business landscape accessible and full of opportunity.</p>
-              <p>With INSPO Corporate Services, your business vision is not just supported — it’s inspired, nurtured, and driven toward success.</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5 }}
+              className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-5  relative  ">
+
+              <div
+
+                className="group  p-5 lg:p-7  rounded-3xl bg-white relative transition-all duration-500 relative top-0 hover:top-[-5px]"
+              >
 
 
-            </div>
+                <div className="flex gap-4 items-center">
+
+                  <h3 className="text-[18px] font-semibold">Our Mission</h3>
+                </div>
+                <p className="text-sm  leading-snug text-1 py-4 font-light">
+                  our mission is empower businesses through innovate best solution, exceptional service. our mission is empower businesses through innovate best solution, exceptional service. our mission is empower businesses through innovate best solution, exceptional service.
+                </p>
+
+              </div>
+              <div
+
+                className="group  p-5 lg:p-7  rounded-3xl bg-white relative transition-all duration-500 relative top-0 hover:top-[-5px]"
+              >
+
+
+                <div className="flex gap-4 items-center">
+
+                  <h3 className="text-[18px] font-semibold">Our Vision</h3>
+                </div>
+                <p className="text-sm  leading-snug text-1 py-4 font-light">
+                  our mission is empower businesses through innovate best solution, exceptional service. our mission is empower businesses through innovate best solution, exceptional service. our mission is empower businesses through innovate best solution, exceptional service.
+                </p>
+
+              </div>
+
+            </motion.div>
 
 
 
@@ -93,9 +108,6 @@ export default function Home() {
         </div>
       </section>
 
-      <ConsultationBanner />
-      <Partners />
-      <CostCalculator />
 
       <Footer />
     </>

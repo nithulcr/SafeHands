@@ -3,7 +3,7 @@ import AnimatedButton from "./AnimatedButton";
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--siteColor)] rounded-3xl mt-8 text-white font-normal">
+    <footer className="bg-[var(--siteColor)] rounded-3xl mt-8 mb-4 text-white font-normal">
       <div className="max-w-[1250px] mx-auto py-14 lg:py-20  px-6">
         <div className="heading flex flex-col gap-4 md:flex-row justify-between md:items-center  mx-auto mb-10 md:mb-14 border-b  border-gray-300 border-dashed pb-7">
           <div>
@@ -37,21 +37,15 @@ export default function Footer() {
 
               </a>
               <a href="https://x.com" aria-label="X" target="_blank" rel="noopener noreferrer" className="bg-[#C5CFD1] w-10 h-10 flex items-center justify-center rounded-lg p-2 social-icon2">
-                <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clipPath="url(#clip0_1036_725)">
-                    <mask id="mask0_1036_725" maskUnits="userSpaceOnUse" x="0" y="0" width="18" height="19">
-                      <path d="M0 0.977539H18V18.9775H0V0.977539Z" fill="#09424D" />
-                    </mask>
-                    <g mask="url(#mask0_1036_725)">
-                      <path d="M14.175 1.82129H16.9354L10.9054 8.73072L18 18.1344H12.4457L8.09229 12.4323L3.11657 18.1344H0.353571L6.80271 10.7416L0 1.82257H5.69571L9.62486 7.03357L14.175 1.82129ZM13.2043 16.4784H14.7343L4.86 3.39115H3.21943L13.2043 16.4784Z" fill="#09424D" />
-                    </g>
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="mask0_1502_1564" maskUnits="userSpaceOnUse" x="0" y="0" width="19" height="19">
+                    <path d="M0.668701 0.15332H18.6687V18.1533H0.668701V0.15332Z" fill="white" />
+                  </mask>
+                  <g mask="url(#mask0_1502_1564)">
+                    <path d="M14.8437 0.996826H17.6041L11.5741 7.90625L18.6687 17.31H13.1144L8.76099 11.6078L3.78527 17.31H1.02227L7.47142 9.91711L0.668701 0.998112H6.36442L10.2936 6.20911L14.8437 0.996826ZM13.873 15.654H15.403L5.5287 2.56668H3.88813L13.873 15.654Z" fill="#09424D" />
                   </g>
-                  <defs>
-                    <clipPath id="clip0_1036_725">
-                      <rect width="18" height="18" fill="#09424D" transform="translate(0 0.977539)" />
-                    </clipPath>
-                  </defs>
                 </svg>
+
 
               </a>
               <a href="https://linkedin.com" aria-label="Linkedin" target="_blank" rel="noopener noreferrer" className="bg-[#C5CFD1] w-10 h-10 flex items-center justify-center rounded-lg p-2 social-icon2">
