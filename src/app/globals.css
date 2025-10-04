@@ -309,13 +309,13 @@ background-size: contain;
 .button.transparent-btn3 .button-text{
   color: var(--siteColor);
   font-weight: 500!important;
-
+  gap: 10px;
 }
 .button.transparent-btn2 .button-text > .btn-svg {
     background: #46ADC0;
-    width: 30px;
-    height: 30px;
-    padding: 5px;
+    width: 25px;
+    height: 25px;
+    padding: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -417,31 +417,6 @@ h1 span{
   font-size: 13px;
 }
 
-.service-shape {
-  background: #F6F6F6;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 450px;
-}
-
-.service-shape div:before {
-  content: '';
-  background: url(/service-shape.png);
-  background-size: 600px;
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  position: absolute;
-  top: 0;
-  left: 25px;
-  width: 100%;
-  height: 700px;
-  max-height: 100%;
-  max-width: calc(100% - 50px);
-  max-width: 70%;
-
-}
 .active-service svg path{
   fill: white;
 }
@@ -478,9 +453,6 @@ h1 span{
 
   }
 
-  .service-shape {
-    height: 320px;
-  }
   .cost-btns .button {
 
     min-width: auto;

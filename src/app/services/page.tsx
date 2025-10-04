@@ -17,13 +17,9 @@ export async function generateMetadata(
 }
 
 import Header from "../components/Header";
-import Services from "../components/Services";
-import Partners from "../components/Partners";
-import CostCalculator from "../components/CostCalculator";
+import ServicesFull from "../components/ServicesFull";
+import Hero2 from "../components/Hero2";
 
-
-
-import ConsultationBanner from "../components/ConsultationBanner";
 
 import Footer from "../components/Footer";
 
@@ -31,20 +27,19 @@ import Footer from "../components/Footer";
 
 
 
-export default function ServicesPage() {
-    return (
-        <>
-            <Header />
-           
-            <Services />
-          
-            <ConsultationBanner />
-            <Partners />
-            <CostCalculator />
+export default function Services() {
+  return (
+    <>
+      <Header />
+      <Hero2
+        heading_en="Services"
+        breadcrumbText_en="Services"
+        breadcrumbPosition="left"
+      />
+      <ServicesFull />
 
 
-            
-            <Footer />
-        </>
-    );
+      <Footer />
+    </>
+  );
 }

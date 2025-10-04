@@ -96,7 +96,7 @@ export default function ContactSection() {
           {/* Right: Form */}
           <form
             onSubmit={handleSubmit}
-            className="rounded-3xl lg:pt-30 space-y-5"
+            className="rounded-3xl bg-[var(--background2)] p-10 space-y-5"
           >
             <div className="grid md:grid-cols-2 gap-4">
 

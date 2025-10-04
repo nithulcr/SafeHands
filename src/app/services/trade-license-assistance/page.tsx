@@ -46,10 +46,8 @@ export default function TradeLicenseAssistance() {
     <>
       <Header />
       <section className="py-14 lg:py-20    mt-[70] lg:mt-[100px] service-section relative">
-        <div className='service-shape'>
-          <div className='max-w-[1320px] px-6 relative w-full h-full mx-auto'></div>
-        </div>
-        <div className="max-w-[1320px] mx-auto px-6  grid lg:grid-cols-3 z-1 gap-6 relative">
+       
+        <div className="max-w-[1250px] mx-auto px-6  grid lg:grid-cols-3 z-1 gap-6 relative">
           <div className='flex flex-col gap-6 lg:gap-12 lg:col-span-2'>
             <div>
               <h1 className='text-3xl lg:text-[36px] xl:text-[48px] font-bold mb-1 leading-tight max-w-[500px] mb-2'>Smart and effective business agency.</h1>

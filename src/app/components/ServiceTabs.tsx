@@ -19,12 +19,12 @@ const services = [
 export default function ServiceTabs({ current }: { current: string }) {
     return (
         <div className="pt-5 lg:pt-10 flex flex-col gap-5">
-            <div className="bg-[var(--blue)] p-6 lg:p-8 rounded-[24px]">
+            <div className="bg-[var(--siteColor)] p-6 lg:p-8 rounded-[24px]">
                 <h4 className='text-2xl font-normal text-white mb-5'>Categories</h4>
                 <div className="flex items-center flex-wrap gap-3 ">
                     {services.map((service) => (
                         <Link key={service.href} href={service.href}
-                            className={`px-4 py-3 rounded-[10px] flex items-center text-sm lg:text-[16px] gap-2 justify-between w-full ${service.href === current ? 'bg-[var(--blue1)] active-service  text-white ' : 'bg-white'}`}
+                            className={`px-4 py-3 rounded-[10px] flex items-center text-sm lg:text-[16px] gap-2 justify-between w-full ${service.href === current ? 'bg-[#036072] active-service  text-white ' : 'bg-white'}`}
                         >
                             {service.label}
                             <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" >

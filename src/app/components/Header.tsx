@@ -31,7 +31,7 @@ const navItems = [
             { href: "/services/heat-treatment", label: "Heat Treatment" },
         ],
     },
-    { href: "/blog", label: "Blog" },
+    { href: "/blogs", label: "Blog" },
     { href: "/ContactUs", label: "Contact" },
 ];
 
@@ -158,8 +158,8 @@ export default function Header() {
             )}
             <div
                 className={
-                    "second-header bg-[var(--background2)] w-full border-b  border-b-[rgba(0,0,0,0.1)] " +
-                    (scrolled ? "rounded-b-[16px] " : " ") +
+                    "second-header  w-full border-b bg-[#fff] rounded-b-[16px] border-b-[rgba(0,0,0,0.1)] " +
+                    (scrolled ? "rounded-b-[16px] bg-[#fff]" : "bg-[var(--background2)]") +
                     (pathname === "/" ? " md:mt-3 rounded-t-[16px]" : "rounded-b-[16px]")
                 }
             >

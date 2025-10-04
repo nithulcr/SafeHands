@@ -1,5 +1,4 @@
 "use client";
-import { Metadata, ResolvingMetadata } from 'next';
 import Image from "next/image";
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
