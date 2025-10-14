@@ -83,7 +83,7 @@ export default function FaqAccordion() {
               <button
                 onClick={() => toggle(idx)}
                 aria-expanded={openIdx === idx}
-                className={`flex items-center  cursor-pointer justify-between w-full px-4 lg:px-8 font-medium  lg:text-[1.08rem] text-md  bg-white`}
+                className={`flex items-center  cursor-pointer text-left justify-between w-full px-4 lg:px-8 font-medium  lg:text-[1.08rem] text-md  bg-white`}
               >
                 {faq.question}
                 <span className="text-xl inline-flex items-center justify-center bg-[#EDF6F3] p-4 rounded-full w-8 h-8">
@@ -129,9 +129,9 @@ export default function FaqAccordion() {
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ type: "tween", duration: 0.4 }}
-                    className="px-7 lg:px-8  text-[#626262]  font-normal border-t border-dashed border-[#A0A0A0] mt-3"
+                    className="px-5 lg:px-8  text-[#626262]  font-normal border-t border-dashed border-[#A0A0A0] mt-3"
                   >
-                    <span className="pt-5 block"> {faq.answer}</span>
+                    <span className="pt-5 block text-sm md:text-[16px]"> {faq.answer}</span>
                   </motion.div>
                 )}
               </AnimatePresence>

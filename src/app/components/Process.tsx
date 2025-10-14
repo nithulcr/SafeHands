@@ -149,7 +149,7 @@ const ProcessMain = () => {
                     <div className="">
                       <p className="text-xs bg-[#ECF0F0] rounded-lg px-4 py-1 text-[#626262] sm:text-sm inline-block font-normal max-w-[250px]">{choose.date}</p>
 
-                      <h3 className="text-lg md:text-xl leading-tight font-semibold text-site  mt-2 ">{choose.title}</h3>
+                      <h3 className="text-lg md:text-xl leading-tight font-semibold text-site  mt-2 min-h-[70px]">{choose.title}</h3>
 
 
                     </div>

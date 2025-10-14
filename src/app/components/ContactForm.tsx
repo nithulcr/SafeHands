@@ -16,8 +16,10 @@ export default function ContactForm() {
 
     // Get data from form fields
     const form = e.target as HTMLFormElement;
+    const firstName = (form.elements.namedItem('firstName') as HTMLInputElement).value;
+    const lastName = (form.elements.namedItem('lastName') as HTMLInputElement).value;
     const formData = {
-      name: (form.elements.namedItem('name') as HTMLInputElement).value,
+      name: `${firstName} ${lastName}`,
       number: (form.elements.namedItem('number') as HTMLInputElement).value,
       email: (form.elements.namedItem('email') as HTMLInputElement).value,
       message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
@@ -53,14 +55,14 @@ export default function ContactForm() {
         >
           <div className="grid md:grid-cols-2 gap-4">
             <input
-              name="name"
+              name="firstName"
               className="w-full bg-[#036072] rounded-2xl px-6 py-3 focus:outline-none placeholder-[#BFBCBC]"
               type="text"
               placeholder={"First Name"}
               required
             />
             <input
-              name="name"
+              name="lastName"
               className="w-full bg-[#036072] rounded-2xl px-6 py-3 focus:outline-none placeholder-[#BFBCBC]"
               type="text"
               placeholder={"Last Name"}
@@ -90,7 +92,7 @@ export default function ContactForm() {
 
             <textarea
               name="message"
-              className="w-full bg-[#036072] rounded-2xl px-6 min-h-[120px] py-3 focus:outline-none resize-none placeholder-[#BFBCBC]"
+              className="w-full bg-[#036072] text-white rounded-2xl px-6 min-h-[120px] py-3 focus:outline-none resize-none placeholder-[#BFBCBC]"
               rows={3}
               placeholder={"Message"}
               required
@@ -101,10 +103,10 @@ export default function ContactForm() {
             <AnimatedButton type="submit"
               label="Get a Quote" className="w-full transparent-btn no-icon" />
           </div>
-          <div className="justify-self-end message-status absolute bottom-[10px] right-[35px]">
+          <div className="justify-self-end message-status absolute bottom-[15px] right-[35px]">
             {messageStatus && (
-              <p className={`${messageStatus.type === 'success' ? 'text-blue-500' : 'text-red-500'}`}>
-                {messageStatus.message} esfc
+              <p className={`${messageStatus.type === 'success' ? 'text-green-500  text-xs font-normal' : 'text-red-500 text-xs font-normal'}`}>
+                {messageStatus.message}
               </p>
             )}
           

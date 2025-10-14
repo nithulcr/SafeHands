@@ -10,11 +10,11 @@ import AnimatedButton from "./AnimatedButton";
 
 const navItems = [
     { href: "/", label: "Home" },
-    { href: "/AboutUs", label: "About us" },
+    { href: "#", label: "About us" },
 
     {
         label: "Country",
-        href: "/our-countryy",
+        href: "#",
         submenu: [
             { href: "#", label: "Country1" },
             { href: "#", label: "Country2" },
@@ -22,7 +22,7 @@ const navItems = [
     },
     {
         label: "Services",
-        href: "/services",
+        href: "#",
         submenu: [
             { href: "#", label: "MOFA Attestation" },
             { href: "#", label: "Birth Certificate Attestation" },
@@ -30,8 +30,8 @@ const navItems = [
             { href: "#", label: "Marriage Certificate Attestation" },
         ],
     },
-    { href: "/blogs", label: "Blog" },
-    { href: "/ContactUs", label: "Contact" },
+    { href: "#", label: "Blog" },
+    { href: "#", label: "Contact" },
 ];
 
 export default function Header() {
@@ -86,7 +86,7 @@ export default function Header() {
                     <div className="h-full">
                         <div className="h-full max-w-[660px] flex items-center space-x-6 top-header-left relative ml-auto px-6 py-2">
                             <p className="font-light">Are you ready to grow up your business?</p>
-                            <a href="ContactUs" className="flex items-center space-x-2 font-bold pr-5">
+                            <a href="#" className="flex items-center space-x-2 font-bold pr-5">
                                 Contact Us
                                 <svg className="ml-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -173,7 +173,8 @@ export default function Header() {
                             {navItems.map((item) =>
                                 item.submenu ? (
                                     <div
-                                        key={item.href}
+                                        key={`${item.label}-${item.href}`}
+
                                         className="relative h-full flex items-center"
                                         onMouseEnter={() => setOpenDropdowns((prev) => ({ ...prev, [item.label]: true }))}
                                         onMouseLeave={() => setOpenDropdowns((prev) => ({ ...prev, [item.label]: false }))}
@@ -210,7 +211,8 @@ export default function Header() {
                                     </div>
                                 ) : (
                                     <Link
-                                        key={item.href}
+                                       key={`${item.label}-${item.href}`}
+
                                         href={item.href}
                                         className={`place-items-center flex transition-colors duration-300 font-light text-md menu-item ${pathname === item.href ? "menu-active" : ""
                                             }`}

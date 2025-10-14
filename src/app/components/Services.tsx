@@ -270,7 +270,7 @@ const Services = () => {
                     {/* Description */}
                     <div className="absolute bottom-[0px] z-1  lg:h-0 lg:opacity-0 translate-y-4 group-hover:opacity-100 group-hover:h-auto group-hover:translate-y-0 transition-all duration-500 overflow-hidden">
                       <h3 className="text-lg md:text-xl leading-tight font-semibold text-white mt-2 ">{choose.title}</h3>
-                      <p className="text-xs text-[#D9D9D9] sm:text-sm lg:mt-2 font-light max-w-[250px]">{choose.description}</p>
+                      <p className="text-xs text-[#D9D9D9] sm:text-sm lg:mt-2 font-light max-w-[250px] mt-2">{choose.description}</p>
 
                       <AnimatedButton href="{choose.link}" label="Learn More" className="w-fit transparent-btn2 mt-3" />
                     </div>

@@ -254,6 +254,9 @@ background-size: contain;
   transition: .3s;
   padding: 10px;
 }
+.whatsapp-btn .button-text > .btn-svg{
+  padding: 7px;
+}
 .button:hover .button-text > .btn-svg{
  transform: rotate(45deg);
 }
