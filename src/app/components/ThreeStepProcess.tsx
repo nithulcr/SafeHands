@@ -8,19 +8,19 @@ import AnimatedButton from "./AnimatedButton";
 
 const steps = [
     {
-        title: "Fill In The Form",
+        title: "Submit",
         number: '01',
-        description: "We identify and develop income‑producing properties backed by binding lease agreements and strong tenancy profiles.",
+        description: "Hand over your documents, or let us collect them right from your doorstep.",
     },
     {
-        title: "Verification & Payment",
+        title: "Process",
         number: '02',
-        description: "We identify and develop income‑producing properties backed by binding lease agreements and strong tenancy profiles.",
+        description: "We take care of the official steps — ministries, embassies, and notaries — without you having to run around.",
     },
     {
-        title: "Get Your Documents",
+        title: "Deliver",
         number: '03',
-        description: "We identify and develop income‑producing properties backed by binding lease agreements and strong tenancy profiles.",
+        description: "Your documents are returned to you, fully attested and ready for use.",
     },
 
 ];
@@ -43,22 +43,26 @@ export default function ThreeStepProcess() {
                             </svg>
                             working process
                         </div>
-                        <h2 ref={fadeRef} className="text-center md:text-left fade-up-stagger text-2xl lg:text-[36px] max-w-[400px] font-medium mb-1 leading-tight text-site">
-                            Seamless Process, Great Results.
-                        </h2>
+                        <div className="flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-8">
+                            <h2 ref={fadeRef} className="text-center md:text-left fade-up-stagger text-2xl lg:text-[36px] max-w-[400px] font-medium mb-1 leading-tight text-site">
+                                Seamless Process, Great Results.
+                            </h2>
+                            <p className="max-w-[340px] text-sm font-normal text-center md:text-left">No missed workdays, no confusing procedures. Just a straightforward process that saves your time and gives you peace of mind.</p>
+                        </div>
+
                     </div>
                     <AnimatedButton type="submit"
                         label="Let's Talk" className="w-fit" />
                 </motion.div>
 
-                <div className="flex flex-col md:flex-row gap-5  justify-center items-center">
+                <div className="flex flex-col md:flex-row gap-5  justify-center">
 
 
 
 
                     {steps.map((step, idx) => (
                         <div key={step.title} className="flex-1 flex flex-col process-card p-5 lg:p-7  rounded-3xl bg-white relative transition-all duration-500 relative top-0 hover:top-[-5px]">
-                            <svg  width="54" height="54" viewBox="0 0 57 58" fill="none" xmlns="http://www.w3.org/2000/svg" className="process-card-svg">
+                            <svg width="54" height="54" viewBox="0 0 57 58" fill="none" xmlns="http://www.w3.org/2000/svg" className="process-card-svg">
                                 <circle cx="28.7426" cy="29.1167" r="28.1875" fill="#D5E5E3" />
                                 <circle cx="28.7425" cy="29.1165" r="22.3797" fill="white" />
                                 <path d="M21.3978 29.1167H23.2606M33.3197 29.1167L28.849 24.646M33.3197 29.1167L28.849 33.5874M33.3197 29.1167H25.496" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -71,7 +75,7 @@ export default function ThreeStepProcess() {
                             <div className="bg-[var(--blue1)] w-full">
 
                                 <h3 className="text-xl md:text-[22px] font-bold mb-2 text-site">{step.title}</h3>
-                                <p className="text-md  font-light text-[#8C8C8C]">{step.description}</p>
+                                <p className="text-md  font-light text-[#8C8C8C] max-w-[300px] pb-2">{step.description}</p>
                             </div>
                         </div>
                     ))}

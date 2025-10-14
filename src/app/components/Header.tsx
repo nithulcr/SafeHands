@@ -11,24 +11,23 @@ import AnimatedButton from "./AnimatedButton";
 const navItems = [
     { href: "/", label: "Home" },
     { href: "/AboutUs", label: "About us" },
+
     {
         label: "Country",
-        href: "/our-country",
+        href: "/our-countryy",
         submenu: [
-            { href: "/country/machine-tools", label: "Machine Tools" },
-            { href: "/country/fabrication-automation", label: "Fabrication & Automation" },
-            { href: "/country/metrology", label: "Metrology" },
-            { href: "/country/heat-treatment", label: "Heat Treatment" },
+            { href: "#", label: "Country1" },
+            { href: "#", label: "Country2" },
         ],
     },
     {
         label: "Services",
         href: "/services",
         submenu: [
-            { href: "/services/machine-tools", label: "Machine Tools" },
-            { href: "/services/fabrication-automation", label: "Fabrication & Automation" },
-            { href: "/services/metrology", label: "Metrology" },
-            { href: "/services/heat-treatment", label: "Heat Treatment" },
+            { href: "#", label: "MOFA Attestation" },
+            { href: "#", label: "Birth Certificate Attestation" },
+            { href: "#", label: "Degree Certificate Attestation" },
+            { href: "#", label: "Marriage Certificate Attestation" },
         ],
     },
     { href: "/blogs", label: "Blog" },
@@ -197,7 +196,7 @@ export default function Header() {
                                                 <div className="py-1">
                                                     {item.submenu.map((subItem) => (
                                                         <Link
-                                                            key={subItem.href}
+                                                            key={subItem.label}
                                                             href={subItem.href}
                                                             className={`block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ${pathname === subItem.href ? "text-[var(--siteColor)] font-semibold" : ""
                                                                 }`}
@@ -225,7 +224,7 @@ export default function Header() {
                     </div>
                     <div className="flex items-center gap-3">
                         <div>
-                            <AnimatedButton href="#" label="Let's Talk" className="w-fit" />
+                            <AnimatedButton href="https://wa.me/0509548130" label="Let's Chat" className="w-fit whatsapp-btn" />
                         </div>
                         <button onClick={handleMenuToggle} className="lg:hidden text-black">
                             {open ? <X size={28} strokeWidth={1} /> : <Menu size={28} strokeWidth={1} />}
@@ -254,7 +253,7 @@ export default function Header() {
                                     <div className="pl-4 mt-2 space-y-2">
                                         {item.submenu.map((subItem) => (
                                             <Link
-                                                key={subItem.href}
+                                                key={subItem.label}
                                                 href={subItem.href}
                                                 className={`block ${pathname === subItem.href ? "font-semibold" : ""
                                                     }`}

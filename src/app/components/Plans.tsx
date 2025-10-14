@@ -8,42 +8,46 @@ import AnimatedButton from "./AnimatedButton";
 const cards = [
     {
         title: "Educational ",
+        subtitle: "Educational Documents ",
+
         features: [
-            "Degree Certificate Attestation",
-            "Diploma Certificate Attestation",
-            "Passing Certificate Attestation",
-            "Bachelor Degree Attestation",
-            "Master Degree Attestation",
-            "Associate Degree Attestation",
-            "Engg. Certificate Attestation",
+            "Degree Certificates",
+            "Diploma & Transcripts",
+            "School Certificates",
+            "Professional Course Certifivcates",
+            "MOE Equivalency",
+          
         ],
-        link: "/contactUs",
+        link: "/",
     },
     {
-        title: "Educational ",
+        title: "Personal ",
+        subtitle: "Personal Documents ",
+
         features: [
-            "Birth Certificate Attestation",
-            "Marriage Certificate Attestation",
-            "Transfer Certificate Attestation",
-            "Divorce Certificate Attestation",
-            "Singleness Certificate Attestation",
-            "Death Certificate Attestation",
-            "Medical Certificate Attestation",
+            "Birth Certificates",
+            "Marriage Certificates",
+            "Divorce Certificates",
+            "Death Certificates",
+            "Medical Certificates",
+            "Affidavits & Declarations",
+
         ],
-        link: "/contactUs",
+        link: "/",
     },
     {
-        title: "Educational ",
+        title: "Commercial ",
+        subtitle: "Commercial Documents ",
+
         features: [
-            "Memorandum of Association",
-            "Article of Association",
-            "Certificate of Incumbency",
-            "Power of Attorney (POA) Attestation",
-            "Commercial Invoices Attestation",
+            "Memorandum of Association (MOA)",
+            "Power Of Attorney",
+            "Contracts & Agreements",
+            "Commercial Invoices",
             "Certificate of Incorporation",
             "Certificate of Good Standing",
         ],
-        link: "/contactUs",
+        link: "/",
     },
 ];
 
@@ -57,16 +61,17 @@ export default function UaeCompanyCards() {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.5 }} className="heading flex flex-col items-center max-w-[550px] mx-auto mb-10">
+                    transition={{ duration: 0.5 }} className="heading flex flex-col items-center max-w-[550px] mx-auto mb-14">
                     <div className="flex items-center gap-2 text-site mb-3 uppercase text-sm">
                         <svg width="20" height="20" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.0742 0.86853L16.0966 5.58161L19.6848 0.86853H17.0742ZM24.7565 1.85392L18.6755 8.84619L24.7565 6.31989V1.85392ZM9.19522 4.23193C9.16211 4.23246 9.12956 4.23372 9.0968 4.23525C8.61387 4.2575 8.16395 4.37421 7.79238 4.63566C6.93093 5.24169 7.21881 6.59506 6.63559 7.96289C4.64293 12.636 2.62996 16.0252 0.851196 18.5263V23.9777C3.97841 22.8521 8.63611 21.6856 15.4428 21.4513C16.8711 21.4023 17.9681 22.1148 18.8246 21.5124C20.939 20.0249 20.1735 15.0541 17.1346 10.3953C16.9446 10.1042 16.7677 9.80785 16.5696 9.53342C14.193 6.24142 11.282 4.20287 9.19511 4.23203L9.19522 4.23193ZM8.92227 5.52392C8.57919 6.25656 8.90135 7.83685 9.73162 9.78222C9.46959 8.79999 9.49356 8.08723 9.86807 7.85083C10.6869 7.33392 12.8669 9.28388 14.7367 12.2064C16.6065 15.1287 17.4582 17.917 16.6395 18.4339C16.3026 18.6466 15.7351 18.4412 15.0541 17.923C16.4616 19.4045 17.732 20.2702 18.512 20.2252C18.4214 20.3924 18.3254 20.5545 18.1819 20.6554C16.8159 21.6165 13.5225 19.0602 10.8361 14.942C8.14973 10.8237 7.0849 6.69747 8.45092 5.73649C8.59092 5.63809 8.74463 5.55055 8.92227 5.52392ZM24.7565 11.6181L20.456 13.0649L24.7565 13.7423V11.6181Z" fill="#09424D" />
                         </svg>
                         Experts in all types
                     </div>
-                    <h2 ref={fadeRef} className="text-center fade-up-stagger text-2xl lg:text-[36px] font-medium mb-1 leading-tight text-site">
-                        Documents Attestation We can Assist You
+                    <h2 ref={fadeRef} className="text-center fade-up-stagger text-2xl lg:text-[36px] font-medium  leading-tight text-site">
+                       Documents We Handle
                     </h2>
+                    <p className="text-[var(--siteColor)] font-normal text-center">Whatever the document, we make sure it’s accepted — quickly, safely, and without complications.</p>
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -74,11 +79,11 @@ export default function UaeCompanyCards() {
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ duration: 0.5 }} className="flex overflow-auto md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 -mr-5 -ml-5 md:m-0 pl-6 pr-6 md:p-0">
                     {cards.map((card, idx) => (
-                        <div key={idx} className="bg-[#F6F6F6] rounded-xl  overflow-hidden flex flex-col min-w-[280px]">
+                        <div key={idx} className="bg-white rounded-xl  overflow-hidden flex flex-col min-w-[280px]">
 
                             <div className="flex flex-col flex-1 p-5 lg:p-8">
                                 <h3 className="font-bold text-xl text-site">{card.title}</h3>
-                                <span className="text-[14px]  text-[#8C8C8C] font-light">Documents Attestation</span>
+                                <span className="text-[14px]  text-[#8C8C8C] font-light">{card.subtitle}</span>
                                 <AnimatedButton href={card.link} label="Let's Talk" className="w-full justify-between my-4" />
 
 

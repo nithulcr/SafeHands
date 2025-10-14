@@ -241,7 +241,6 @@ background-size: contain;
 
 
 
-
 .transparent-btn{
   background: #fff;
   border: 2px solid rgba(255, 255, 255, 1);
@@ -257,6 +256,18 @@ background-size: contain;
 }
 .button:hover .button-text > .btn-svg{
  transform: rotate(45deg);
+}
+.button:hover .button-text > .btn-svg{
+transform:none;
+}
+.whatsapp-btn svg{
+  display: none;
+}
+svg.whatsapp{
+  display:none;
+}
+.whatsapp-btn svg.whatsapp{
+  display:block;
 }
 .button.no-icon .btn-svg{
   display: none;

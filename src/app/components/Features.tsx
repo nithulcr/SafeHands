@@ -24,7 +24,7 @@ const featuresEn = [
         </>,
 
         title: "Attestation",
-        description: "We identify and develop income‑producing properties backed by binding lease agreements and strong tenancy profiles.",
+        description: "Credible attestation services, approved in 120+ countries, for personal, educational, and commercial documents.",
         link: "/"
     },
     {
@@ -48,7 +48,7 @@ const featuresEn = [
         </>,
 
         title: "PRO services",
-        description: "We identify and develop income‑producing properties backed by binding lease agreements and strong tenancy profiles.",
+        description: "End-to-end Public Relations Officer (PRO) solutions, including government approvals, license renewals, and documentation support.",
         link: "/"
     },
     {
@@ -79,7 +79,7 @@ const featuresEn = [
         </>,
 
         title: "⁠Business setup",
-        description: "We identify and develop income‑producing properties backed by binding lease agreements and strong tenancy profiles.",
+        description: "We help entrepreneurs establish their businesses in the UAE with a clutter-free process — from registration to licensing and compliance.",
         link: "/"
     },
     {
@@ -108,7 +108,7 @@ const featuresEn = [
         </>,
 
         title: "⁠Golden visa",
-        description: "We identify and develop income‑producing properties backed by binding lease agreements and strong tenancy profiles.",
+        description: "State of the art assistance for obtaining your UAE Golden Visa – for investors, professionals, entrepreneurs and exceptional talents.",
         link: "/"
     }
 ];
@@ -134,7 +134,7 @@ export default function Features() {
                         Choose Your Need
                     </div>
                     <h2 ref={fadeRef} className="text-center fade-up-stagger text-2xl lg:text-[36px] font-medium mb-1 leading-tight text-site">
-                        Comprehensive Immigration Categories
+                        Holistic Immigration Assistance.
                     </h2>
                 </motion.div>
 
@@ -145,8 +145,8 @@ export default function Features() {
                     transition={{ duration: 0.5 }}
                     className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5  relative  ">
                     {features.map((feature) => (
-                        <Link 
-                        href={feature.link}
+                        <Link
+                            href={feature.link}
                             key={feature.id}
 
                             className="group  p-5 lg:p-7  rounded-3xl bg-white relative transition-all duration-500 relative top-0 hover:top-[-5px]"
@@ -161,10 +161,10 @@ export default function Features() {
 
                                 <h3 className="text-[18px] font-semibold">{feature.title}</h3>
                             </div>
-                            <p className="text-sm  leading-snug text-1 py-4 font-light">
+                            <p className="text-sm  leading-snug text-1 py-4 font-light lg:min-h-[130px]">
                                 {feature.description}
                             </p>
-                            <span  className="flex items-center gap-2 mt-2 font-medium">
+                            <span className="flex items-center gap-2 mt-2 font-medium">
                                 Lear more
                                 <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" className="group-hover:rotate-210 transition-transform duration-300">
                                     <circle cx="11.1884" cy="11.1398" r="11.1443" fill="#0A4235" />

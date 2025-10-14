@@ -18,23 +18,36 @@ import Image from "next/image";
 const ProcessMainDataEn = [
   {
     img: ("/process1.png"),
-    title: <>Travelling to Australia for Tourism or Business?</>,
+    title: <>Step-by-Step Guide to UAE Document Attestatio</>,
     date: "18-08-2025",
-    link: "/ProcessMain/trade-license-assistance",
+    link: "/",
 
   },
   {
     img: ("/process1.png"),
-    title: <>Travelling to Australia for Tourism or Business?</>,
+    title: <>How to Choose Between Mainland, Free Zone, and Offshore Business Setup</>,
     date: "18-08-2025",
-    link: "/ProcessMain/trade-license-assistance",
+    link: "/",
 
   },
   {
     img: ("/process1.png"),
-    title: <>Travelling to Australia for Tourism or Business?</>,
+    title: <>Golden Visa Eligibility: Who Qualifies and How to Apply</>,
     date: "18-08-2025",
-    link: "/ProcessMain/trade-license-assistance",
+    link: "/",
+
+  },
+  {
+    img: ("/process1.png"),
+    title: <>Top 5 Mistakes to Avoid During Certificate Attestation in the UAE</>,
+    date: "18-08-2025",
+    link: "/",
+
+  }, {
+    img: ("/process1.png"),
+    title: <>Why PRO Services Save Time for Expats and Businesses</>,
+    date: "18-08-2025",
+    link: "/",
 
   },
 
@@ -64,8 +77,8 @@ const ProcessMain = () => {
               </svg>
               working Process
             </div>
-            <h2 ref={fadeRef} className="text-center md:text-left fade-up-stagger text-2xl lg:text-[36px] max-w-[300px] font-medium mb-1 leading-tight text-site">
-              Strategies and Insights.
+            <h2 ref={fadeRef} className="text-center md:text-left fade-up-stagger text-2xl lg:text-[36px]  font-medium mb-1 leading-tight text-site">
+              Strategies & Insights.
             </h2>
           </div>
           <div className="flex items-center gap-2">

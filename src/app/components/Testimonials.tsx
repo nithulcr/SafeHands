@@ -84,7 +84,7 @@ export default function Testimonials() {
                        read reviews
                     </div>
                     <h2 ref={fadeRef} className="text-center fade-up-stagger text-2xl lg:text-[36px] font-medium mb-1 leading-tight text-site">
-                       Ride with Confidence
+                       Stories of trust
                     </h2>
                 </motion.div>
 

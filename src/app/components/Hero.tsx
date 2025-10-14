@@ -10,7 +10,7 @@ import { useStaggeredFadeUp } from "./useStaggeredFadeUp";
 
 const Hero = () => {
     const fadeRef = useRef<HTMLHeadingElement>(null);
-  useStaggeredFadeUp(fadeRef as React.RefObject<HTMLElement>);
+    useStaggeredFadeUp(fadeRef as React.RefObject<HTMLElement>);
 
     return (
         <>
@@ -34,7 +34,8 @@ const Hero = () => {
                             </h1>
 
                             <div className="mt-4 lg:mt-5 flex items-center flex-wrap gap-6">
-                                <AnimatedButton href="" label="Talk with Us" className="w-fit" />
+                                <AnimatedButton href="https://wa.me/0509548130" label="Let's Chat" className="w-fit whatsapp-btn" />
+
                                 <a className="flex items-center gap-4">
 
                                     <svg width="33" height="35" viewBox="0 0 33 35" fill="none" xmlns="http://www.w3.org/2000/svg">
