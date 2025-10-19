@@ -56,14 +56,14 @@ export default function ContactForm() {
           <div className="grid md:grid-cols-2 gap-4">
             <input
               name="firstName"
-              className="w-full bg-[#036072] rounded-2xl px-6 py-3 focus:outline-none placeholder-[#BFBCBC]"
+              className="w-full bg-[#036072] rounded-2xl px-6 py-3 focus:outline-none placeholder-[#BFBCBC] text-white"
               type="text"
               placeholder={"First Name"}
               required
             />
             <input
               name="lastName"
-              className="w-full bg-[#036072] rounded-2xl px-6 py-3 focus:outline-none placeholder-[#BFBCBC]"
+              className="w-full bg-[#036072] rounded-2xl px-6 py-3 focus:outline-none placeholder-[#BFBCBC] text-white"
               type="text"
               placeholder={"Last Name"}
               required
@@ -74,7 +74,7 @@ export default function ContactForm() {
           <div className="grid md:grid-cols-2 gap-4">
             <input
               name="number"
-              className="w-full bg-[#036072] rounded-2xl px-6 py-3 focus:outline-none placeholder-[#BFBCBC]"
+              className="w-full bg-[#036072] rounded-2xl px-6 py-3 focus:outline-none placeholder-[#BFBCBC] text-white"
               type="text"
               placeholder={"Mobile"}
               required
@@ -82,7 +82,7 @@ export default function ContactForm() {
 
             <input
               name="email"
-              className="w-full bg-[#036072] rounded-2xl px-6 py-3 focus:outline-none placeholder-[#BFBCBC]"
+              className="w-full bg-[#036072] rounded-2xl px-6 py-3 focus:outline-none placeholder-[#BFBCBC] text-white"
               type="email"
               placeholder={"Email"}
               required
@@ -92,7 +92,7 @@ export default function ContactForm() {
 
             <textarea
               name="message"
-              className="w-full bg-[#036072] text-white rounded-2xl px-6 min-h-[120px] py-3 focus:outline-none resize-none placeholder-[#BFBCBC]"
+              className="w-full bg-[#036072] text-white rounded-2xl px-6 min-h-[120px] py-3 focus:outline-none text-white resize-none placeholder-[#BFBCBC]"
               rows={3}
               placeholder={"Message"}
               required
