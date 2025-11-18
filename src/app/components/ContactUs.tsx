@@ -46,7 +46,7 @@ export default function ContactSection() {
           {/* Left: Info */}
           
             <div className="mb-8">
-              <span className="text-[#A7A9AC]">Make an Appointment</span>
+              <span className="text-[#8C8C8C]">Make an Appointment</span>
               <h2 className="text-2xl lg:text-[40px] font-medium mb-4 max-w-[600px]">
                 Request a free quote
               </h2>

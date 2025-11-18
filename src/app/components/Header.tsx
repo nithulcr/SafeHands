@@ -10,7 +10,7 @@ import AnimatedButton from "./AnimatedButton";
 
 const navItems = [
     { href: "/", label: "Home" },
-    { href: "#", label: "About us" },
+    { href: "/AboutUs", label: "About us" },
 
     {
         label: "Country",
@@ -22,7 +22,7 @@ const navItems = [
     },
     {
         label: "Services",
-        href: "#",
+        href: "/services",
         submenu: [
             { href: "#", label: "MOFA Attestation" },
             { href: "#", label: "Birth Certificate Attestation" },
@@ -30,8 +30,8 @@ const navItems = [
             { href: "#", label: "Marriage Certificate Attestation" },
         ],
     },
-    { href: "#", label: "Blog" },
-    { href: "#", label: "Contact" },
+    { href: "/blogs", label: "Blog" },
+    { href: "/ContactUs", label: "Contact" },
 ];
 
 export default function Header() {
@@ -123,7 +123,7 @@ export default function Header() {
                                     </svg>
 
                                 </a>
-                                <a href="https://www.instagram.com/inspouae/" aria-label="X" target="_blank" rel="noopener noreferrer" className="w-5 h-5">
+                                <a href="https://www.instagram.com/safe handsuae/" aria-label="X" target="_blank" rel="noopener noreferrer" className="w-5 h-5">
                                     <svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clipPath="url(#clip0_1036_725)">
                                             <mask id="mask0_1036_725" maskUnits="userSpaceOnUse" x="0" y="0" width="18" height="19">
@@ -165,7 +165,7 @@ export default function Header() {
                 <div className="max-w-[1250px] mx-auto flex items-center justify-between md:px-6 px-3 h-[80px] main-header z-10 relative">
                     <div className="text-2xl font-bold h-full align-content-center flex">
                         <Link href="/" className="items-center flex">
-                            <img src="/logo.png" alt="Logo" width={120} height={50} className="w-[140px] lg:w-[150px]" />
+                            <img src="/logo.png" alt="Logo" width={120} height={50} className="w-[135px]" />
                         </Link>
                     </div>
                     <div className="items-center gap-6 hidden md:flex h-full">

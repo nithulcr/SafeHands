@@ -21,9 +21,9 @@ const ServicesFullDataEn = [
       </svg>
 
     ),
-    title: <> Degree Certificate Attestation </>,
-    description: "State of the art assistance for obtaining your UAE Golden Visa – for investors, professionals, entrepreneurs and exceptional talents.",
-    link: "/services/trade-license-assistance",
+    title: <>Document Attestation Overview </>,
+    description: "Document attestation is the process of validating a document’s authenticity so it can be legally accepted in another country.",
+    link: "/services/Document-Attestation-Overview",
 
   },
   {
@@ -43,9 +43,9 @@ const ServicesFullDataEn = [
 
 
     ),
-    title: <>Degree Certificate Attestation</>,
+    title: <>Educational Certificate Attestation</>,
     description: "State of the art assistance for obtaining your UAE Golden Visa – for investors, professionals, entrepreneurs and exceptional talents.",
-    link: "/services/pro-services",
+    link: "/services/Educational-Certificate-Attestation",
   },
   {
     id: "03",

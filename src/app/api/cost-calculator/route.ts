@@ -45,7 +45,7 @@ export async function POST(req: NextRequest) {
       from: `"${firstName}" <${process.env.EMAIL_USER}>`,
       to: process.env.RECIPIENT_EMAIL,
       replyTo: email,
-      subject: 'New Cost Calculator Submission from Inspo Website',
+      subject: 'New Cost Calculator Submission from safe hands Website',
       html: `
         <h2>New Cost Calculator Submission</h2>
         <p><strong>Business Activity:</strong> ${businessActivity}</p>

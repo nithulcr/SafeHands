@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 
 interface Hero2Props {
     heading_en: string;
-    breadcrumbText_en?: string;
     breadcrumbPosition?: "left" | "center" | "right";
 }
 
@@ -18,6 +17,7 @@ const Hero2 = ({
     // Choose based on language
     const heading = heading_en;
     const breadcrumbText = heading_en;
+
 
     // Breadcrumb alignment
     const breadcrumbAlignClass =
@@ -38,7 +38,7 @@ const Hero2 = ({
                 transition={{ duration: 0.5 }}
                 className={`relative z-10 py-8 lg:py-14 flex flex-col justify-center items-center w-full max-w-7xl min-h-[200px] lg:min-h-[340px] px-6 items-${breadcrumbPosition} text-${breadcrumbPosition}`}
             >
-                <h2 className="text-4xl lg:text-6xl font-medium text-center text-white">
+                <h2 className="text-3xl lg:text-5xl leading-tight font-medium text-center text-white max-w-[700px]">
                     {heading}
                 </h2>
 
@@ -58,6 +58,8 @@ const Hero2 = ({
                         </div>
 
                         <span className="text-sm lg:text-md  my-1 font-normal">{breadcrumbText}</span>
+                        
+                        
                     </div>
                 )}
             </motion.div>

@@ -1,9 +1,11 @@
+"use client";
 import Link from 'next/link';
 import Image from "next/image";
+import { usePathname } from 'next/navigation';
 
 const services = [
-    { href: "/services/trade-license-assistance", label: "Trade License Assistance" },
-    { href: "/services/pro-services", label: "PRO Services" },
+    { href: "/services/Document-Attestation-Overview", label: "Document Attestation Overview" },
+    { href: "/services/Educational-Certificate-Attestation", label: "Educational Certificate Attestation" },
 
     { href: "/services/golden-visa", label: "Golden Visa" },
     { href: "/services/local-sponsorship-nominee-services", label: "Local Sponsorship & Nominee Services" },
@@ -16,15 +18,16 @@ const services = [
 ];
 
 
-export default function ServiceTabs({ current }: { current: string }) {
+export default function ServiceTabs() {
+    const pathname = usePathname();
     return (
-        <div className="pt-5 lg:pt-10 flex flex-col gap-5">
+        <div className="pt-5 lg:pt-0 flex flex-col gap-5">
             <div className="bg-[var(--siteColor)] p-6 lg:p-8 rounded-[24px]">
                 <h4 className='text-2xl font-normal text-white mb-5'>Categories</h4>
                 <div className="flex items-center flex-wrap gap-3 ">
                     {services.map((service) => (
                         <Link key={service.href} href={service.href}
-                            className={`px-4 py-3 rounded-[10px] flex items-center text-sm lg:text-[16px] gap-2 justify-between w-full ${service.href === current ? 'bg-[#036072] active-service  text-white ' : 'bg-white'}`}
+                            className={`px-4 py-3 rounded-[10px] flex items-center text-sm lg:text-[16px] gap-2 justify-between w-full ${pathname === service.href ? 'bg-[#036072] active-service  text-white ' : 'bg-white'}`}
                         >
                             {service.label}
                             <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" >
@@ -35,7 +38,7 @@ export default function ServiceTabs({ current }: { current: string }) {
                     ))}
                 </div>
             </div>
-            <a className="bg-[var(--blue)] px-6 py-4 lg:px-8 lg:py-5 rounded-[24px] text-white flex items-center justify-between gap-4">
+            <a className="bg-[var(--siteColor)] px-6 py-4 lg:px-8 lg:py-5 rounded-[24px] text-white flex items-center justify-between gap-4">
                <span className='flex-none text-xl'> Get a quote</span>
                 <Image
                             src="/whatsapp.png"
