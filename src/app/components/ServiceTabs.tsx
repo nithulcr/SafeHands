@@ -7,14 +7,14 @@ const services = [
     { href: "/services/Document-Attestation-Overview", label: "Document Attestation Overview" },
     { href: "/services/Educational-Certificate-Attestation", label: "Educational Certificate Attestation" },
 
-    { href: "/services/golden-visa", label: "Golden Visa" },
-    { href: "/services/local-sponsorship-nominee-services", label: "Local Sponsorship & Nominee Services" },
-    { href: "/services/marketing-services", label: "Marketing Services" },
-    { href: "/services/vat-tax-consultancy", label: "VAT & Tax Consultancy" },
-    { href: "/services/business-centre-solutions", label: "Business Centre Solutions" },
-    { href: "/services/bank-account-opening-support", label: "Bank Account Opening Support" },
-    { href: "/services/visa-immigration-support", label: "Visa & Immigration Support" },
-    { href: "/services/web-application-development", label: "Web & Application Development" },
+    { href: "/services/Personal-Document-Attestation", label: "Personal Document Attestation" },
+    { href: "/services/Commercial-Document-Attestation", label: "Commercial Document Attestation" },
+    { href: "/services/MOFA-Attestation", label: "MOFA Attestation (UAE)" },
+    { href: "/services/Apostille-Services", label: "Apostille Services" },
+    { href: "/services/True-Copy-Attestation", label: "True Copy Attestation" },
+    { href: "/services/Police-Clearence-Certificate", label: "Police Clearence Certificate" },
+    { href: "/services/Translation-Services", label: "Translation Services" },
+    { href: "/services/Country-Specific-Attestation-Services", label: "Country Specific Attestation Services" },
 ];
 
 
