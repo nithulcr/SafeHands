@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 const services = [
     { href: "/services/Document-Attestation-Overview", label: "Document Attestation Overview" },
     { href: "/services/Educational-Certificate-Attestation", label: "Educational Certificate Attestation" },
-
     { href: "/services/Personal-Document-Attestation", label: "Personal Document Attestation" },
     { href: "/services/Commercial-Document-Attestation", label: "Commercial Document Attestation" },
     { href: "/services/MOFA-Attestation", label: "MOFA Attestation (UAE)" },
@@ -15,6 +14,17 @@ const services = [
     { href: "/services/Police-Clearence-Certificate", label: "Police Clearence Certificate" },
     { href: "/services/Translation-Services", label: "Translation Services" },
     { href: "/services/Country-Specific-Attestation-Services", label: "Country Specific Attestation Services" },
+    { href: "/services/UAE-Issued-Document", label: "UAE-Issued Document" },
+    { href: "/services/Family-Visa-Documentation-Support", label: "Family Visa Documentation Support" },
+    { href: "/services/Business-Setup-Services", label: "Business Setup Services" },
+    { href: "/services/Pro-Services", label: "Pro Services" },
+    { href: "/services/Golder-Visa-Support-Services", label: "Golder Visa Support Services" },
+
+
+
+
+
+
 ];
 
 
