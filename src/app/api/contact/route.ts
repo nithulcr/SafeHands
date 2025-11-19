@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
 
     if (error instanceof Error) {
       errorMessage = (error as Error).message;
-      console.error('❌ Error sending email:', (error as Error).message);
+      console.error('❌ Error sending email:', error);
     } else {
       console.error('❌ Unknown error sending email:', error);
     }
