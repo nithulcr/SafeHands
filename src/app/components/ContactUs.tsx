@@ -74,7 +74,7 @@ export default function ContactSection() {
                   </span>
                   <div className="flex flex-col gap-1">
                     <span className="text-[#8C8C8C] text-sm">Work with us</span>
-                    <span className="font-semibold text-lg">info@invena.com</span>
+                    <a href="mailto:safehandsattest@gmail.com" className="font-semibold text-lg">safehandsattest@gmail.com</a>
                   </div>
                 </li>
                 <li className="flex items-center gap-4">

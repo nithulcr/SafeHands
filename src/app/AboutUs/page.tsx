@@ -35,7 +35,7 @@ export default function Home() {
               alt="Business for Success"
               width={1000}
               height={1000}
-              className="object-cover f-full  rounded-[16px] mx-auto max-w-[600px]"
+              className="object-cover f-full w-full rounded-[16px] mx-auto max-w-[600px]"
             />
 
 

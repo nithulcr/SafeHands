@@ -203,14 +203,14 @@ export default function Header() {
                                                 initial={{ opacity: 0, y: 20 }}
                                                 animate={{ opacity: 1, y: 0 }}
                                                 transition={{ duration: 0.2 }}
-                                                className="absolute top-full left-0 w-60 bg-white rounded-b-md shadow-lg z-60"
+                                                className="absolute top-full left-1/2 -translate-x-1/2 w-[60vw] max-w-4xl bg-white rounded-b-md shadow-lg z-60"
                                             >
-                                                <div className="py-1">
+                                                <div className="p-6 grid grid-cols-3 gap-x-8">
                                                     {item.submenu.map((subItem) => (
                                                         <Link
                                                             key={subItem.label}
                                                             href={subItem.href}
-                                                            className={`block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ${pathname === subItem.href ? "text-[var(--siteColor)] font-semibold" : ""
+                                                            className={`block py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md px-4 ${pathname === subItem.href ? "text-[var(--siteColor)] font-semibold" : ""
                                                                 }`}
                                                         >
                                                             {subItem.label}

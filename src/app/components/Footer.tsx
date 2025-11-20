@@ -194,7 +194,7 @@ export default function Footer() {
                 </span>
                 <div className="flex flex-col gap-1">
                   <span className="text-[#8C8C8C] text-[14px]">Work with us</span>
-                  <span className="">info@invena.com</span>
+                  <a href="mailto:safehandsattest@gmail.com"  className="">safehandsattest@gmail.com</a>
                 </div>
               </li>
               <li className="flex gap-4 text-[15px]">
