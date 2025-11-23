@@ -49,7 +49,7 @@ export default function Commertial() {
             />
             <div className='flex flex-col gap-8 md:gap-12'>
               <div>
-                <div className='text-[#8C8C8C] flex flex-col gap-4'>
+                <div className='text-[var(--color)] flex flex-col gap-4'>
                   <p className='font-light'>Commercial documents form the backbone of every business. They reflect a company’s legal identity, financial operations, ownership structure, agreements, and international dealings. When businesses expand into new markets, enter global partnerships, submit tenders, sign contracts, or engage in cross-border trade, commercial documents must be authenticated to maintain legal compliance and official recognition.
                   </p>
                   <p className='font-light'>

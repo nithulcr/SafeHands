@@ -83,7 +83,7 @@ export default function UaeCompanyCards() {
 
                             <div className="flex flex-col flex-1 p-5 lg:p-8">
                                 <h3 className="font-bold text-xl text-site">{card.title}</h3>
-                                <span className="text-[14px]  text-[#8C8C8C] font-light">{card.subtitle}</span>
+                                <span className="text-[14px]  text-[var(--color)] font-light">{card.subtitle}</span>
                                 <AnimatedButton href={card.link} label="Let's Talk" className="w-full justify-between my-4" />
 
 

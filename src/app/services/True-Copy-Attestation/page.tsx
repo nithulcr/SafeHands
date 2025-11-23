@@ -49,7 +49,7 @@ export default function TrueCopy() {
             />
             <div className='flex flex-col gap-8 md:gap-12'>
               <div>
-                <div className='text-[#8C8C8C] flex flex-col gap-4'>
+                <div className='text-[var(--color)] flex flex-col gap-4'>
                   <p className='font-light'>
                     True Copy Attestation is the process of verifying that a photocopy of a document is an exact and accurate representation of its original. This verification is essential for legal, financial, and administrative purposes in many countries. Banks, courts, consulates, and government departments often require true copies for submissions when the original documents cannot be handed over.
 

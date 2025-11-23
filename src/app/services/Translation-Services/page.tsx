@@ -49,7 +49,7 @@ export default function TranslationServices() {
             />
             <div className='flex flex-col gap-8 md:gap-12'>
               <div>
-                <div className='text-[#8C8C8C] flex flex-col gap-4'>
+                <div className='text-[var(--color)] flex flex-col gap-4'>
                   <p className='font-light'>
                    In a country as globally connected as the UAE, translation plays an important role in legal, corporate, and immigration processes. Documents issued in one language must often be translated into Arabic or English before being accepted by embassies, ministries, courts, and governmental institutions. This translation must be accurate, legally recognised, and certified, ensuring that it carries the same value as the original.
                   </p>

@@ -49,7 +49,7 @@ export default function Apostille() {
             />
             <div className='flex flex-col gap-8 md:gap-12'>
               <div>
-                <div className='text-[#8C8C8C] flex flex-col gap-4'>
+                <div className='text-[var(--color)] flex flex-col gap-4'>
                   <p className='font-light'>
                     The Apostille process is a simplified method of international document legalisation, accepted by all member countries of the Hague Convention. Unlike traditional attestation—which requires multiple embassy and MOFA approvals—apostille certification condenses the process into a single verified seal issued by the designated authority in the document’s home country.
 

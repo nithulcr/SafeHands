@@ -41,7 +41,7 @@ export default function BlogListPage() {
               <div key={post.slug} className="site-card blog-card rounded-3xl bg-white">
                 <Image src={post.image} alt="blog img" width="400" height="250" className=' w-full rounded-xl' />
                 <div className='p-5 pt-3'>
-                  <span className='text-sm text-[#8C8C8C] fw-200'>{post.date}</span>
+                  <span className='text-sm text-[var(--color)] fw-200'>{post.date}</span>
                   <h2 className="text-2xl font-semibold my-3 line-clamp-3 max-w-[80%]">
                     <Link href={`/blogs/${post.slug}`}>{post.title}</Link>
                   </h2>

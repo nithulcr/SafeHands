@@ -49,7 +49,7 @@ export default function Personal() {
             />
             <div className='flex flex-col gap-8 md:gap-12'>
               <div>
-                <div className='text-[#8C8C8C] flex flex-col gap-4'>
+                <div className='text-[var(--color)] flex flex-col gap-4'>
                   <p className='font-light'>Personal certificates carry deep emotional and legal significance. They represent life events, family relationships, identity details, and civil status. When these documents need to be used internationally—whether for visas, family sponsorships, marriage registration, adoption, schooling, medical procedures, or legal matters—they must undergo a thorough attestation process. This process confirms that the information contained within them is genuine and officially recognised by the issuing country.
 
                   </p>

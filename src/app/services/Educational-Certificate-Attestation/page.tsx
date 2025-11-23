@@ -49,7 +49,7 @@ export default function Educational() {
             />
             <div className='flex flex-col gap-8 md:gap-12'>
               <div>
-                <div className='text-[#8C8C8C] flex flex-col gap-4'>
+                <div className='text-[var(--color)] flex flex-col gap-4'>
                   <p className='font-light'>
 Educational documents are the foundation of your professional identity. They speak on your behalf when you apply for a job abroad, seek admission in international universities, or pursue specialised licensing programs. Without proper attestation, even the most prestigious degrees may lose their value in the eyes of foreign authorities. Recognising this, SafeHands Attestation treats every educational document with meticulous care, ensuring that it meets all global standards of verification.
                   </p>

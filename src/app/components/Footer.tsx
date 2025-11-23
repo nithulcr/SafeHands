@@ -180,7 +180,7 @@ export default function Footer() {
 
                 </span>
                 <div className="flex flex-col gap-1">
-                  <span className="text-[#8C8C8C] text-[14px]">Call Us 24/7</span>
+                  <span className="text-[var(--color)] text-[14px]">Call Us 24/7</span>
                   <span className="">+971 50 954 8130</span>
                 </div>
               </li>
@@ -193,7 +193,7 @@ export default function Footer() {
 
                 </span>
                 <div className="flex flex-col gap-1">
-                  <span className="text-[#8C8C8C] text-[14px]">Work with us</span>
+                  <span className="text-[var(--color)] text-[14px]">Work with us</span>
                   <a href="mailto:Info@safeattestuae.com"  className="">Info@safeattestuae.com</a>
                 </div>
               </li>
@@ -206,7 +206,7 @@ export default function Footer() {
 
                 </span>
                 <div className="flex flex-col gap-1">
-                  <span className="text-[#8C8C8C] text-[14px]">Our Location</span>
+                  <span className="text-[var(--color)] text-[14px]">Our Location</span>
                   <span className="">Al Saqar Business Tower, 13th Floor, Sheikh Zayed Road</span>
                 </div>
               </li>

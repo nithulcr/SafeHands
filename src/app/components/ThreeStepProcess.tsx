@@ -75,7 +75,7 @@ export default function ThreeStepProcess() {
                             <div className="bg-[var(--blue1)] w-full">
 
                                 <h3 className="text-xl md:text-[22px] font-bold mb-2 text-site">{step.title}</h3>
-                                <p className="text-md  font-light text-[#8C8C8C] max-w-[300px] pb-2">{step.description}</p>
+                                <p className="text-md  font-light text-[var(--color)] max-w-[300px] pb-2">{step.description}</p>
                             </div>
                         </div>
                     ))}

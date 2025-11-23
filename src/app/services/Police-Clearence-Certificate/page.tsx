@@ -49,7 +49,7 @@ export default function PCC() {
             />
             <div className='flex flex-col gap-8 md:gap-12'>
               <div>
-                <div className='text-[#8C8C8C] flex flex-col gap-4'>
+                <div className='text-[var(--color)] flex flex-col gap-4'>
                   <p className='font-light'>
                    A Police Clearance Certificate, often recognised as a Good Conduct Certificate, stands as an essential proof of a person’s clean background. Whether someone is preparing to migrate, secure employment abroad, apply for a long-term visa, or complete a licensing procedure, the PCC acts as a declaration of trustworthiness. It assures foreign authorities that the individual does not hold any criminal record or pending legal charges in the issuing country. Understanding its importance, SafeHands Attestation provides an end-to-end service that simplifies what is often seen as one of the most complicated documentation requirements.
                   </p>

@@ -49,7 +49,7 @@ export default function ProServices() {
             />
             <div className='flex flex-col gap-8 md:gap-12'>
               <div>
-                <div className='text-[#8C8C8C] flex flex-col gap-4'>
+                <div className='text-[var(--color)] flex flex-col gap-4'>
                   <p className='font-light'>
                     Public Relations Officer (PRO) services are essential to navigating the UAE’s government processes. For many individuals and companies, dealing with immigration departments, labour offices, licensing authorities, and other government systems can feel confusing and time-consuming. SafeHands provides a complete PRO service framework that removes this burden entirely, ensuring that every government-related task is completed smoothly and professionally.
                   </p>

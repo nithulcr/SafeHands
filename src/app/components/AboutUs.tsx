@@ -26,7 +26,7 @@ export default function AboutUs() {
           <h2 className="text-2xl lg:text-[40px] font-medium leading-tight">Consulting Services
             Empo-wering Your
             Business for Success.</h2>
-          <p className="leading-relaxed text-[#8C8C8C]">
+          <p className="leading-relaxed text-[var(--color)]">
             There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by words which don’t look even slightly believable.
           </p>
            <Image

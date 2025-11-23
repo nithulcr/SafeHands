@@ -4,7 +4,7 @@
   --background: #ECF0F0;
   --background2: #D5E5E3;
   --foreground: #000;
-  --color: #404040;
+  --color: #282828;
   --siteColor: #09424D;
   --siteColor2: #4F4BA1;
 }
@@ -34,6 +34,9 @@ font-family: "Mona Sans", sans-serif;
 .mob-menu{
   overflow: auto;
   max-height: calc(100vh - 60px);
+    margin-top: -20px;
+    z-index: -1;
+    position: relative;
 }
 .text-site{
   color: var(--siteColor);
@@ -485,5 +488,8 @@ h1 span{
 .button-text{
   font-size: 14px;
   gap: 10px;
+}
+.megamenu-active-tab {
+    background: var(--background);
 }
 }

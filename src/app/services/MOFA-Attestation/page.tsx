@@ -49,7 +49,7 @@ export default function Commertial() {
             />
             <div className='flex flex-col gap-8 md:gap-12'>
               <div>
-                <div className='text-[#8C8C8C] flex flex-col gap-4'>
+                <div className='text-[var(--color)] flex flex-col gap-4'>
                   <p className='font-light'>
                     MOFA attestation is the final and most essential stage for any document intended for use within the UAE. Regardless of how many authorities have previously verified a document—whether in the issuing country or at its embassy—the UAE government requires every foreign document to be authenticated by the UAE Ministry of Foreign Affairs before it is considered legally valid.
                   </p>

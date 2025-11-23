@@ -49,7 +49,7 @@ export default function FamilyVisa() {
             />
             <div className='flex flex-col gap-8 md:gap-12'>
               <div>
-                <div className='text-[#8C8C8C] flex flex-col gap-4'>
+                <div className='text-[var(--color)] flex flex-col gap-4'>
                   <p className='font-light'>
                    The UAE Golden Visa represents one of the most prestigious residency programs available today. Offering long-term residency to investors, professionals, exceptional talents, and high-achieving individuals, the Golden Visa opens doors to a stable future in one of the world’s most progressive nations. However, the application process involves detailed eligibility checks, specific documentation, strict attestation requirements, and continuous coordination with government entities.
                   </p>

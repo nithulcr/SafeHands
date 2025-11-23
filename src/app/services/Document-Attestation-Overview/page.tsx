@@ -49,7 +49,7 @@ export default function Document() {
             />
             <div className='flex flex-col gap-8 md:gap-12'>
               <div>
-                <div className='text-[#8C8C8C] flex flex-col gap-4'>
+                <div className='text-[var(--color)] flex flex-col gap-4'>
                   <p className='font-light'>Document attestation is the process of validating a document’s authenticity so it can be legally accepted in another country. It is a crucial requirement for visas, employment, education, family sponsorships, and corporate activities. Attestation involves a sequence of approvals, each confirming that the document is genuine and has been issued by the appropriate authority. Since every country follows a different attestation structure, the process can quickly become overwhelming for individuals who are unfamiliar with international legal procedures.
 
                   </p>

@@ -49,7 +49,7 @@ export default function UAEIssued() {
             />
             <div className='flex flex-col gap-8 md:gap-12'>
               <div>
-                <div className='text-[#8C8C8C] flex flex-col gap-4'>
+                <div className='text-[var(--color)] flex flex-col gap-4'>
                   <p className='font-light'>
                    Documents issued within the UAE—whether educational, personal, legal, or commercial—often require attestation before they can be used outside the country. This process validates the authenticity of the document and ensures it is internationally recognised. UAE-issued certificates must typically pass through local ministries, courts, notary public offices, and embassy channels before they are accepted abroad.
                   </p>

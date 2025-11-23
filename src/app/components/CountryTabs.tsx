@@ -4,18 +4,18 @@ import Image from "next/image";
 import { usePathname } from 'next/navigation';
 
 const Countrys = [
-  { href: "/countrys/France-certificate-attestation", label: "France Certificate Attestation For UAE" },
-  { href: "/countrys/australia-certificate-attestation", label: "Australia Certificate Attestation For UAE" },
-  { href: "/countrys/lebanon-certificate-attestation", label: "Lebanon Certificate Attestation For UAE" },
-  { href: "/countrys/bvi-certificate-attestation", label: "BVI Certificate Attestation For UAE" },
-  { href: "/countrys/russia-certificate-attestation", label: "Russia Certificate Attestation For UAE" },
-  { href: "/countrys/spain-certificate-attestation", label: "Spain Certificate Attestation For UAE" },
-  { href: "/countrys/portugal-certificate-attestation", label: "Portugal Certificate Attestation For UAE" },
-  { href: "/countrys/uk-certificate-attestation", label: "UK Certificate Attestation For UAE" },
-  { href: "/countrys/usa-certificate-attestation", label: "USA Certificate Attestation For UAE" },
-  { href: "/countrys/canada-certificate-attestation", label: "Canada Certificate Attestation For UAE" },
-  { href: "/countrys/italy-certificate-attestation", label: "Italy Certificate Attestation For UAE" },
-  { href: "/countrys/india-certificate-attestation", label: "India Certificate Attestation For UAE" },
+  { href: "/countrys/France-certificate-attestation", label: "France Certificate Attestation " },
+  { href: "/countrys/australia-certificate-attestation", label: "Australia Certificate Attestation " },
+  { href: "/countrys/lebanon-certificate-attestation", label: "Lebanon Certificate Attestation " },
+  { href: "/countrys/bvi-certificate-attestation", label: "BVI Certificate Attestation " },
+  { href: "/countrys/russia-certificate-attestation", label: "Russia Certificate Attestation " },
+  { href: "/countrys/spain-certificate-attestation", label: "Spain Certificate Attestation " },
+  { href: "/countrys/portugal-certificate-attestation", label: "Portugal Certificate Attestation " },
+  { href: "/countrys/uk-certificate-attestation", label: "UK Certificate Attestation " },
+  { href: "/countrys/usa-certificate-attestation", label: "USA Certificate Attestation " },
+  { href: "/countrys/canada-certificate-attestation", label: "Canada Certificate Attestation " },
+  { href: "/countrys/italy-certificate-attestation", label: "Italy Certificate Attestation " },
+  { href: "/countrys/india-certificate-attestation", label: "India Certificate Attestation " },
 ];
 
 

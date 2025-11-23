@@ -47,7 +47,7 @@ export default function CountrySlug({ params }: { params: { slug: string } }) {
               className="object-cover f-full rounded-[16px] w-full"
             />
             <div className='flex flex-col gap-8'>
-              <div className='text-[#8C8C8C] flex flex-col gap-4 type-1 font-light' dangerouslySetInnerHTML={{ __html: country.content }} />
+              <div className='text-[var(--color)] flex flex-col gap-4 type-1 font-light' dangerouslySetInnerHTML={{ __html: country.content }} />
               <div className='type2'>
                 <h4 className='text-xl font-semibold'>{country.process.title}</h4>
                 <ul className='mt-4 flex flex-col gap-2'>

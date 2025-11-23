@@ -49,7 +49,7 @@ export default function FamilyVisa() {
             />
             <div className='flex flex-col gap-8 md:gap-12'>
               <div>
-                <div className='text-[#8C8C8C] flex flex-col gap-4'>
+                <div className='text-[var(--color)] flex flex-col gap-4'>
                   <p className='font-light'>
                     Starting a business in the UAE is a remarkable opportunity. The country’s dynamic economy, strategic geographic location, tax benefits, and global connectivity make it one of the most attractive business destinations in the world. Yet, behind the promise of success lies a detailed path of approvals, legal clearances, documentation requirements, and licensing procedures that can overwhelm even the most experienced entrepreneurs. Understanding this complexity, SafeHands provides a complete business setup support system designed to make company formation effortless, transparent, and fast.
                   </p>

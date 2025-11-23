@@ -1,7 +1,7 @@
 export const countriesData = [
   {
     slug: 'France-certificate-attestation',
-    title: 'France Certificate Attestation For UAE',
+    title: 'France Certificate Attestation',
     heroHeading: 'France Certificate Attestation',
     logo: '/country/france.png',
     image: '/country/trade.png',
@@ -48,7 +48,7 @@ export const countriesData = [
   },
   {
     slug: 'australia-certificate-attestation',
-    title: 'Australia Certificate Attestation For UAE',
+    title: 'Australia Certificate Attestation',
     heroHeading: 'Australia Certificate Attestation',
     logo: '/country/australia.avif',
     image: '/country/trade.png',
@@ -91,7 +91,7 @@ export const countriesData = [
   },
   {
     slug: 'lebanon-certificate-attestation',
-    title: 'Lebanon Certificate Attestation For UAE',
+    title: 'Lebanon Certificate Attestation',
     heroHeading: 'Lebanon Certificate Attestation',
     logo: '/country/lebanon.png',
     image: '/country/trade.png',
@@ -135,7 +135,7 @@ export const countriesData = [
   },
   {
     slug: 'bvi-certificate-attestation',
-    title: 'BVI (British Virgin Islands) Certificate Attestation For UAE',
+    title: 'BVI (British Virgin Islands) Certificate Attestation',
     heroHeading: 'BVI Certificate Attestation',
     logo: '/country/bvi.png',
    image: '/country/trade.png',
@@ -181,7 +181,7 @@ export const countriesData = [
   },
   {
     slug: 'russia-certificate-attestation',
-    title: 'Russia Certificate Attestation For UAE',
+    title: 'Russia Certificate Attestation',
     heroHeading: 'Russia Certificate Attestation',
     logo: '/country/russia.svg',
     image: '/country/trade.png',
@@ -225,7 +225,7 @@ export const countriesData = [
   },
   {
     slug: 'spain-certificate-attestation',
-    title: 'Spain Certificate Attestation For UAE',
+    title: 'Spain Certificate Attestation',
     heroHeading: 'Spain Certificate Attestation',
     logo: '/country/spain.png',
    image: '/country/trade.png',
@@ -269,7 +269,7 @@ export const countriesData = [
   },
   {
     slug: 'portugal-certificate-attestation',
-    title: 'Portugal Certificate Attestation For UAE',
+    title: 'Portugal Certificate Attestation',
     heroHeading: 'Portugal Certificate Attestation',
     logo: '/country/portugal.png',
     image: '/country/trade.png',
@@ -313,7 +313,7 @@ export const countriesData = [
   },
   {
     slug: 'uk-certificate-attestation',
-    title: 'UK Certificate Attestation For UAE',
+    title: 'UK Certificate Attestation',
     heroHeading: 'UK Certificate Attestation',
     logo: '/country/uk.png',
    image: '/country/trade.png',
@@ -359,7 +359,7 @@ export const countriesData = [
   },
   {
     slug: 'usa-certificate-attestation',
-    title: 'USA Certificate Attestation For UAE',
+    title: 'USA Certificate Attestation',
     heroHeading: 'USA Certificate Attestation',
     logo: '/country/usa.avif',
    image: '/country/trade.png',
@@ -404,7 +404,7 @@ export const countriesData = [
   },
   {
     slug: 'canada-certificate-attestation',
-    title: 'Canada Certificate Attestation For UAE',
+    title: 'Canada Certificate Attestation',
     heroHeading: 'Canada Certificate Attestation',
     logo: '/country/canada.avif',
     image: '/country/trade.png',
@@ -447,7 +447,7 @@ export const countriesData = [
   },
   {
     slug: 'italy-certificate-attestation',
-    title: 'Italy Certificate Attestation For UAE',
+    title: 'Italy Certificate Attestation',
     heroHeading: 'Italy Certificate Attestation',
     logo: '/country/italy.png',
     image: '/country/trade.png',
@@ -491,7 +491,7 @@ export const countriesData = [
   },
   {
     slug: 'india-certificate-attestation',
-    title: 'India Certificate Attestation for UAE',
+    title: 'India Certificate Attestation',
     heroHeading: 'India Certificate Attestation',
     logo: '/country/india.avif',
    image: '/country/trade.png',

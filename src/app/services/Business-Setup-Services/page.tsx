@@ -48,7 +48,7 @@ export default function FamilyVisa() {
             />
             <div className='flex flex-col gap-8 md:gap-12'>
               <div>
-                <div className='text-[#8C8C8C] flex flex-col gap-4'>
+                <div className='text-[var(--color)] flex flex-col gap-4'>
                   <p className='font-light'>
                   Family visa documentation is one of the most sensitive areas of attestation because it directly affects the ability of families to reunite and live together. Whether someone is sponsoring their spouse, children, parents, or newborns, each visa category requires a set of documents that must be properly attested and translated before submission. A single missing stamp or incomplete verification can result in delays that affect families emotionally and financially.
                   </p>

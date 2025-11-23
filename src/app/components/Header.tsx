@@ -16,18 +16,18 @@ const navItems = [
         label: "Country",
         href: "#",
         submenu: [
-            { href: "/countrys/France-certificate-attestation", label: "France Certificate Attestation For UAE" },
-            { href: "/countrys/australia-certificate-attestation", label: "Australia Certificate Attestation For UAE" },
-            { href: "/countrys/lebanon-certificate-attestation", label: "Lebanon Certificate Attestation For UAE" },
-            { href: "/countrys/bvi-certificate-attestation", label: "BVI Certificate Attestation For UAE" },
-            { href: "/countrys/russia-certificate-attestation", label: "Russia Certificate Attestation For UAE" },
-            { href: "/countrys/spain-certificate-attestation", label: "Spain Certificate Attestation For UAE" },
-            { href: "/countrys/portugal-certificate-attestation", label: "Portugal Certificate Attestation For UAE" },
-            { href: "/countrys/uk-certificate-attestation", label: "UK Certificate Attestation For UAE" },
-            { href: "/countrys/usa-certificate-attestation", label: "USA Certificate Attestation For UAE" },
-            { href: "/countrys/canada-certificate-attestation", label: "Canada Certificate Attestation For UAE" },
-            { href: "/countrys/italy-certificate-attestation", label: "Italy Certificate Attestation For UAE" },
-            { href: "/countrys/india-certificate-attestation", label: "India Certificate Attestation For UAE" },
+            { href: "/countrys/France-certificate-attestation", label: "France Certificate Attestation " },
+            { href: "/countrys/australia-certificate-attestation", label: "Australia Certificate Attestation " },
+            { href: "/countrys/lebanon-certificate-attestation", label: "Lebanon Certificate Attestation " },
+            { href: "/countrys/bvi-certificate-attestation", label: "BVI Certificate Attestation " },
+            { href: "/countrys/russia-certificate-attestation", label: "Russia Certificate Attestation " },
+            { href: "/countrys/spain-certificate-attestation", label: "Spain Certificate Attestation " },
+            { href: "/countrys/portugal-certificate-attestation", label: "Portugal Certificate Attestation " },
+            { href: "/countrys/uk-certificate-attestation", label: "UK Certificate Attestation " },
+            { href: "/countrys/usa-certificate-attestation", label: "USA Certificate Attestation " },
+            { href: "/countrys/canada-certificate-attestation", label: "Canada Certificate Attestation " },
+            { href: "/countrys/italy-certificate-attestation", label: "Italy Certificate Attestation " },
+            { href: "/countrys/india-certificate-attestation", label: "India Certificate Attestation " },
         ],
     },
     {
@@ -260,11 +260,11 @@ export default function Header() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className={`mob-menu lg:hidden bg-[var(--background2)] font-light px-6 pt-8 pb-20 space-y-3 shadow-md transition-all duration-300 origin-top ${animation}`}
+                    className={`mob-menu lg:hidden bg-[var(--background2)] font-light px-4 pt-8 pb-20  shadow-md transition-all duration-300 origin-top ${animation}`}
                 >
                     {navItems.map((item) =>
                         item.submenu ? (
-                            <div key={item.href}>
+                            <div key={item.href} className="p-2">
                                 <div
                                     className="flex justify-between items-center "
                                     onClick={() => setOpenDropdowns((prev) => ({ ...prev, [item.label]: !openDropdowns[item.label] }))}
@@ -273,12 +273,12 @@ export default function Header() {
                                     <ChevronDown size={16} className={`ml-1 transition-transform duration-300 ${openDropdowns[item.label] ? "rotate-180" : ""}`} />
                                 </div>
                                 {openDropdowns[item.label] && (
-                                    <div className="pl-4 mt-2 space-y-2">
+                                    <div className="pl-1 mt-2 space-y-1">
                                         {item.submenu.map((subItem) => (
                                             <Link
                                                 key={subItem.label}
                                                 href={subItem.href}
-                                                className={`block ${pathname === subItem.href ? "font-semibold" : ""
+                                                className={`block p-2 rounded-lg ${pathname === subItem.href ? "megamenu-active-tab" : ""
                                                     }`}
                                             >
                                                 {subItem.label}
@@ -291,7 +291,7 @@ export default function Header() {
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className={`block hover:text-[var(--siteColor)] ${pathname === item.href ? "text-[var(--siteColor)] font-semibold" : ""}`}
+                                className={`block hover:text-[var(--siteColor)] p-2 rounded-lg ${pathname === item.href ? "text-[var(--siteColor)] megamenu-active-tab" : ""}`}
                             >
                                 {item.label}
                             </Link>
