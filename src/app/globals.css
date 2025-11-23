@@ -21,12 +21,19 @@ html {
   scroll-behavior: smooth;
 
 }
-
+.megamenu-active-tab{
+  color: var(--siteColor);
+  background: var(--background2);
+}
 body {
   background: var(--background);
   color: var(--foreground);
 font-family: "Mona Sans", sans-serif;
   font-weight: 500;
+}
+.mob-menu{
+  overflow: auto;
+  max-height: calc(100vh - 60px);
 }
 .text-site{
   color: var(--siteColor);

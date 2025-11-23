@@ -16,8 +16,18 @@ const navItems = [
         label: "Country",
         href: "#",
         submenu: [
-            { href: "#", label: "Country1" },
-            { href: "#", label: "Country2" },
+            { href: "/countrys/France-certificate-attestation", label: "France Certificate Attestation For UAE" },
+            { href: "/countrys/australia-certificate-attestation", label: "Australia Certificate Attestation For UAE" },
+            { href: "/countrys/lebanon-certificate-attestation", label: "Lebanon Certificate Attestation For UAE" },
+            { href: "/countrys/bvi-certificate-attestation", label: "BVI Certificate Attestation For UAE" },
+            { href: "/countrys/russia-certificate-attestation", label: "Russia Certificate Attestation For UAE" },
+            { href: "/countrys/spain-certificate-attestation", label: "Spain Certificate Attestation For UAE" },
+            { href: "/countrys/portugal-certificate-attestation", label: "Portugal Certificate Attestation For UAE" },
+            { href: "/countrys/uk-certificate-attestation", label: "UK Certificate Attestation For UAE" },
+            { href: "/countrys/usa-certificate-attestation", label: "USA Certificate Attestation For UAE" },
+            { href: "/countrys/canada-certificate-attestation", label: "Canada Certificate Attestation For UAE" },
+            { href: "/countrys/italy-certificate-attestation", label: "Italy Certificate Attestation For UAE" },
+            { href: "/countrys/india-certificate-attestation", label: "India Certificate Attestation For UAE" },
         ],
     },
     {
@@ -203,14 +213,14 @@ export default function Header() {
                                                 initial={{ opacity: 0, y: 20 }}
                                                 animate={{ opacity: 1, y: 0 }}
                                                 transition={{ duration: 0.2 }}
-                                                className="absolute top-full left-1/2 -translate-x-1/2 w-[60vw] max-w-4xl bg-white rounded-b-md shadow-lg z-60"
+                                                className="absolute top-full left-1/2 -translate-x-1/2 w-[70vw] max-w-4xl bg-white rounded-b-xl shadow-lg z-60"
                                             >
                                                 <div className="p-6 grid grid-cols-3 gap-x-8">
                                                     {item.submenu.map((subItem) => (
                                                         <Link
                                                             key={subItem.label}
                                                             href={subItem.href}
-                                                            className={`block py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md px-4 ${pathname === subItem.href ? "text-[var(--siteColor)] font-semibold" : ""
+                                                            className={`block py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md px-4 ${pathname === subItem.href ? "megamenu-active-tab" : ""
                                                                 }`}
                                                         >
                                                             {subItem.label}
@@ -250,7 +260,7 @@ export default function Header() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className={`lg:hidden bg-[var(--background2)] font-light px-6 py-8 space-y-3 shadow-md transition-all duration-300 origin-top ${animation}`}
+                    className={`mob-menu lg:hidden bg-[var(--background2)] font-light px-6 pt-8 pb-20 space-y-3 shadow-md transition-all duration-300 origin-top ${animation}`}
                 >
                     {navItems.map((item) =>
                         item.submenu ? (

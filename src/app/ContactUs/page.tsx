@@ -32,7 +32,7 @@ export default function Home() {
     <>
       <Header />
       <Hero2
-        heading_en="Contact Us"
+        heading_en="Contact"
 
         breadcrumbPosition="left"
       />

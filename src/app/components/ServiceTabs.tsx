@@ -32,7 +32,7 @@ export default function ServiceTabs() {
     const pathname = usePathname();
     return (
         <div className="pt-5 lg:pt-0 flex flex-col gap-5">
-            <div className="bg-[var(--siteColor)] p-6 lg:p-8 rounded-[24px]">
+            <div className="bg-[var(--siteColor)] p-6 lg:p-8 rounded-[24px] hidden lg:block">
                 <h4 className='text-2xl font-normal text-white mb-5'>Categories</h4>
                 <div className="flex items-center flex-wrap gap-3 ">
                     {services.map((service) => (
