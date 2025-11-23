@@ -57,7 +57,7 @@ const Hero2 = ({
 
                         </div>
 
-                        <span className="text-sm lg:text-md  my-1 font-normal">{breadcrumbText}</span>
+                        <span className="text-xs lg:text-md  my-1 font-normal">{breadcrumbText}</span>
                         
                         
                     </div>
