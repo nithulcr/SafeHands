@@ -28,6 +28,8 @@ const navItems = [
             { href: "/countrys/canada-certificate-attestation", label: "Canada Certificate Attestation " },
             { href: "/countrys/italy-certificate-attestation", label: "Italy Certificate Attestation " },
             { href: "/countrys/india-certificate-attestation", label: "India Certificate Attestation " },
+            { href: "/countrys", label: "All Countries" },
+
         ],
     },
     {
@@ -213,9 +215,9 @@ export default function Header() {
                                                 initial={{ opacity: 0, y: 20 }}
                                                 animate={{ opacity: 1, y: 0 }}
                                                 transition={{ duration: 0.2 }}
-                                                className="absolute top-full left-1/2 -translate-x-1/2 w-[70vw] max-w-4xl bg-white rounded-b-xl shadow-lg z-60"
+                                                className="absolute top-full left-1/2 -translate-x-1/2 w-[80vw] max-w-5xl bg-white rounded-b-xl shadow-lg z-60"
                                             >
-                                                <div className="p-6 grid grid-cols-3 gap-x-8">
+                                                <div className="p-6 grid grid-cols-3 gap-x-8 gap-y-1">
                                                     {item.submenu.map((subItem) => (
                                                         <Link
                                                             key={subItem.label}

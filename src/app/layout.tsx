@@ -34,20 +34,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <Script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17416531512"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17754373575"
           strategy="afterInteractive"
         />
+
+
 
         {/* Unified Google Analytics + Ads gtag config */}
         <Script id="gtag-init" strategy="afterInteractive">
           {`
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-      gtag('config', 'G-4L0PCEK1YL');   // Google Analytics
-      gtag('config', 'AW-17416531512'); // Google Ads
-    `}
+            gtag('config', 'G-4L0PCEK1YL');   // Google Analytics
+            gtag('config', 'AW-17754373575'); // Google Ads
+          `}
         </Script>
       </head>
       <body className="antialiased mx-2 md:mx-5">
