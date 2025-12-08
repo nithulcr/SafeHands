@@ -311,8 +311,7 @@ export default function CountrysPage() {
                                 viewport={{ once: true, amount: 0.5 }}
                                 transition={{ duration: 0.5 }}
                             >
-                                <Link
-                                    href={feature.link}
+                                <div
 
                                     className="flex items-center gap-3 rounded-4xl p-[2px] bg-white relative"
                                 >
@@ -322,7 +321,7 @@ export default function CountrysPage() {
                                     </span>
                                     <h3 className="text-[16px] pr-4 font-medium">{feature.title}</h3>
 
-                                </Link>
+                                </div>
                             </motion.div>
                         ))}
                     </div>
@@ -336,8 +335,7 @@ export default function CountrysPage() {
                                 viewport={{ once: true, amount: 0.5 }}
                                 transition={{ duration: 0.5 }}
                             >
-                                <Link
-                                    href={feature.link}
+                                <div
 
                                     className="flex items-center gap-3 rounded-4xl p-[2px] bg-white relative"
                                 >
@@ -347,7 +345,7 @@ export default function CountrysPage() {
                                     </span>
                                     <h3 className="text-[16px] pr-4 font-medium">{feature.title}</h3>
 
-                                </Link>
+                                </div>
                             </motion.div>
                         ))}
                     </div>
@@ -361,8 +359,7 @@ export default function CountrysPage() {
                                 viewport={{ once: true, amount: 0.5 }}
                                 transition={{ duration: 0.5 }}
                             >
-                                <Link
-                                    href={feature.link}
+                                <div
 
                                     className="flex items-center gap-3 rounded-4xl p-[2px] bg-white relative"
                                 >
@@ -372,14 +369,14 @@ export default function CountrysPage() {
                                     </span>
                                     <h3 className="text-[16px] pr-4 font-medium">{feature.title}</h3>
 
-                                </Link>
+                                </div>
                             </motion.div>
                         ))}
                     </div>
                 </div>
 
                 <div className="text-center mt-8">
-                    <Link href="#" className="underline text-site">120+ countries</Link>
+                    <Link href="/countrys" className="underline text-site">120+ countries</Link>
                 </div>
 
 

@@ -75,14 +75,14 @@ export default function BlogPostPage({ params: initialParams }: { params: Promis
             <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-x-8 gap-y-14'>
               {blogsToDisplay.map((relatedPost) => (
                 <div key={relatedPost.slug} className="site-card blog-card rounded-3xl bg-white">
-                  <Image src={post.image} alt="blog img" width="400" height="250" className=' w-full rounded-xl' />
+                  <Image src={relatedPost.image} alt="blog img" width="400" height="250" className=' w-full rounded-xl' />
                   <div className='p-5 pt-3'>
-                    <span className='text-sm text-[var(--color)] fw-200'>{post.date}</span>
+                    <span className='text-sm text-[var(--color)] fw-200'>{relatedPost.date}</span>
                     <h2 className="text-2xl font-semibold my-3 line-clamp-3 max-w-[80%]">
-                      <Link href={`/blogs/${post.slug}`}>{post.title}</Link>
+                      <Link href={`/blogs/${relatedPost.slug}`}>{relatedPost.title}</Link>
                     </h2>
-                    <p className="text-[#404040] font-normal line-clamp-5">By {post.content}</p>
-                    <AnimatedButton href={`/blogs/${post.slug}`} label="Read More" className="w-fit transparent-btn2 transparent-btn3 mt-6" />
+                    <p className="text-[#404040] font-normal line-clamp-5">By {relatedPost.content}</p>
+                    <AnimatedButton href={`/blogs/${relatedPost.slug}`} label="Read More" className="w-fit transparent-btn2 transparent-btn3 mt-6" />
 
                   </div>
                 </div>
