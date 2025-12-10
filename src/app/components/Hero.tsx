@@ -18,6 +18,39 @@ const Hero = () => {
             <section className="bg-[var(--background2)] hero-section  bottom-shape overflow-hidden relative w-full md:min-h-[80vh] rounded-[16px] flex flex-col justify-center items-center relative mt-[75px] lg:mt-[85px] lg:mt-[110px] pb-14 lg:pb-[70px] pt-14 lg:pt-[70px]">
 
 
+
+<div id="particle-container">
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+	<div className="particle"></div>
+</div>
                 <div className="max-w-[1250px]   grid lg:grid-cols-2 gap-5 px-6">
                     <div className="py-6 lg:py-10 flex items-center">
                         <motion.div initial={{ opacity: 0, y: 20 }}

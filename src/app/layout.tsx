@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Script from "next/script";
 
+
 import { Toaster } from 'react-hot-toast';
 import SmoothScrollWrapper from "./SmoothScrollWrapper";
 
